@@ -13,7 +13,14 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://cdn.jsdelivr.net/npm/bootstrap-4-grid@3/css/grid.min.css',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -32,7 +39,11 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxtjs/style-resources'],
+
+  styleResources: {
+    scss: ['~/assets/scss/colors.scss'],
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
