@@ -11,6 +11,7 @@
       </div>
     </div>
     <div class="slider"></div>
+    <div class="slider slider--white"></div>
   </div>
 </template>
 
@@ -26,6 +27,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .slider {
   background: rgb(97, 105, 109);
   position: fixed;
@@ -34,6 +36,12 @@
   width: 100%;
   height: 100%;
   transform: translateY(100%);
+  z-index: 999;
+
+  &--white {
+    z-index: 998;
+    background: rgb(184, 184, 184);
+  }
 }
 
 .intro-text {

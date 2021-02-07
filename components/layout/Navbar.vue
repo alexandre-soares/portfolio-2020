@@ -34,13 +34,14 @@ export default {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  padding: 2rem 0;
 
   &__list {
     display: flex;
   }
 
   &__item {
-    margin: 0 2rem;
+    margin: 0 3rem;
     font-size: 2rem;
   }
 }

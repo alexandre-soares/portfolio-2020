@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'portfolio',
+    title: 'Alexandre Soares - Web Developer Portfolio',
     htmlAttrs: {
       lang: 'en',
     },

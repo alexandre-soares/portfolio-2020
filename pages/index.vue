@@ -1,14 +1,15 @@
 <template>
   <div>
-    <Intro v-if="false" />
+    <Intro />
     <Hero />
   </div>
 </template>
 
 <script>
-import Intro from '../components/layout/Intro.vue'
+import Hero from '../components/home/Hero.vue'
+import Intro from '../components/home/Intro.vue'
 export default {
-  components: { Intro },
+  components: { Intro, Hero },
 }
 </script>
 
