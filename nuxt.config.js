@@ -21,9 +21,6 @@ export default {
           'https://cdn.jsdelivr.net/npm/bootstrap-4-grid@3/css/grid.min.css',
       },
     ],
-    script: [
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js' },
-    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
