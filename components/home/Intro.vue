@@ -15,6 +15,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'Intro',
+}
+</script>
+
 <style lang="scss" scoped>
 .intro {
   background: $primary-color;
@@ -36,10 +42,10 @@
   width: 100%;
   height: 100%;
   transform: translateY(100%);
-  z-index: 999;
+  z-index: 998;
 
   &--white {
-    z-index: 998;
+    z-index: 997;
     background: rgb(184, 184, 184);
   }
 }
