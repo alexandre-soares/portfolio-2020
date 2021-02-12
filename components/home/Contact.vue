@@ -1,9 +1,9 @@
 <template>
-  <div class="about">
+  <div class="contact">
     <div class="container-fluid">
       <div class="row">
         <div class="col">
-          <h2 class="about__title">About Me</h2>
+          <h2 class="contact__title">Contact</h2>
         </div>
       </div>
       <div class="row">
@@ -18,19 +18,6 @@
             consectetur sit quisquam?
           </p>
         </div>
-        <div class="col">
-          <div class="row">
-            <div class="col label__wrapper">
-              <span class="label label--javascript"
-                ><span>J</span>avascript</span
-              >
-              <span class="label label--vuejs"><span>V</span>ueJS</span>
-
-              <span class="label label--nuxtjs"><span>N</span>uxtJS</span>
-              <span class="label label--sass"><span>S</span>ass</span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -38,12 +25,12 @@
 
 <script>
 export default {
-  name: 'About',
+  name: 'Contact',
 }
 </script>
 
 <style lang="scss" scoped>
-.about {
+.contact {
   height: 60vh;
   padding: 0 10rem;
   display: flex;

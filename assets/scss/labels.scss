@@ -1,0 +1,39 @@
+.label {
+  background-color: white;
+  color: black;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  border-radius: 50rem;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 1rem;
+  text-align: center;
+
+  &__wrapper {
+    text-align: center;
+  }
+
+  & span {
+    font-size: 2rem;
+  }
+
+  &--javascript {
+    background-color: #e4a126;
+    color: white;
+  }
+
+  &--vuejs {
+    background: #00c58e;
+    color: white;
+  }
+
+  &--nuxtjs {
+    background: #2f495e;
+    color: white;
+  }
+
+  &--sass {
+    background: #ce6b9e;
+    color: white;
+  }
+}

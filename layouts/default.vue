@@ -2,7 +2,7 @@
   <div>
     <Navbar />
     <Nuxt />
-    <div class="cursor"></div>
+    <div v-if="customizeCursor" class="cursor"></div>
   </div>
 </template>
 
@@ -12,22 +12,29 @@ export default {
   components: {
     Navbar,
   },
+  data() {
+    return {
+      customizeCursor: false,
+    }
+  },
   mounted() {
-    const cursor = document.querySelector('.cursor')
-    document.addEventListener('mousemove', (e) => {
-      cursor.setAttribute(
-        'style',
-        'top: ' + (e.pageY - 20) + 'px; left: ' + (e.pageX - 20) + 'px'
-      )
-    })
+    if (this.customizeCursor) {
+      const cursor = document.querySelector('.cursor')
+      document.addEventListener('mousemove', (e) => {
+        cursor.setAttribute(
+          'style',
+          'top: ' + (e.pageY - 20) + 'px; left: ' + (e.pageX - 20) + 'px'
+        )
+      })
 
-    document.addEventListener('click', () => {
-      cursor.classList.add('cursor--expand')
+      document.addEventListener('click', () => {
+        cursor.classList.add('cursor--expand')
 
-      setTimeout(() => {
-        cursor.classList.remove('cursor--expand')
-      }, 500)
-    })
+        setTimeout(() => {
+          cursor.classList.remove('cursor--expand')
+        }, 500)
+      })
+    }
   },
 }
 </script>
@@ -84,12 +91,33 @@ img {
   width: 100%;
 }
 
+// btn
+
+.btn {
+  padding: 1rem 2rem;
+  background-color: $secondary-color;
+  border: none;
+  border-radius: 1rem;
+  display: inline-block;
+  margin: 2rem 0;
+  color: $primary-color;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+// icons
+
+.icon {
+  width: 4rem;
+  height: 4rem;
+}
+
 // cursor
 
 .cursor {
   width: 40px;
   height: 40px;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 50%;
   position: absolute;
 
@@ -105,8 +133,8 @@ img {
     border-radius: 50%;
     position: absolute;
     opacity: 0.5;
-    top: -11px;
-    left: -11px;
+    top: -12px;
+    left: -12px;
     animation: cursorAnimation2 0.6s infinite alternate;
   }
 

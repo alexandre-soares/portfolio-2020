@@ -42,7 +42,7 @@ export default {
   modules: ['@nuxtjs/style-resources'],
 
   styleResources: {
-    scss: ['~/assets/scss/colors.scss'],
+    scss: ['~/assets/scss/labels.scss', '~/assets/scss/colors.scss'],
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

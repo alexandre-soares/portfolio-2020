@@ -4,6 +4,7 @@
     <Hero />
     <About />
     <Portfolio />
+    <Contact />
   </div>
 </template>
 
@@ -13,9 +14,10 @@ import Hero from '../components/home/Hero.vue'
 import Intro from '../components/home/Intro.vue'
 import About from '../components/home/About.vue'
 import Portfolio from '../components/home/Portfolio.vue'
+import Contact from '../components/home/Contact.vue'
 
 export default {
-  components: { Intro, Hero, About, Portfolio },
+  components: { Intro, Hero, About, Portfolio, Contact },
   data() {
     return {
       animate: false,

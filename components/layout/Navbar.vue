@@ -3,7 +3,7 @@
     <div class="navbar">
       <div class="navbar__left">
         <ul class="navbar__list">
-          <li class="navbar__item">Home</li>
+          <nuxt-link to="/" class="navbar__item">Home</nuxt-link>
           <li class="navbar__item">About</li>
         </ul>
       </div>
@@ -43,6 +43,7 @@ export default {
   &__item {
     margin: 0 3rem;
     font-size: 2rem;
+    cursor: pointer;
   }
 }
 </style>
