@@ -8,34 +8,35 @@
       </div>
       <div class="row">
         <div class="col">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-            est sit fugit ut eligendi cum? Odio facilis provident voluptatum,
-            amet ducimus commodi pariatur magnam ipsam quia, libero veniam minus
-            nobis. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptates illum nihil autem, vel aperiam quis, ipsam suscipit,
-            earum repellat ea quod accusamus quia maiores ipsum quibusdam dolor
-            consectetur sit quisquam?
-          </p>
+          <h3>Interested? Do not hesitate to contact me!</h3>
         </div>
       </div>
       <div class="row justify-content-center align-items-center">
         <div class="col-1">
           <div class="contact__card">
-            <img src="@/static/img/icon/linkedin-white.svg" alt="linkedin" />
-            <span class="contact__card-title">Linkedin</span>
+            <a
+              href="https://www.linkedin.com/in/alex-ds-soares/"
+              target="_blank"
+            >
+              <img src="@/static/img/icon/linkedin-white.svg" alt="linkedin" />
+              <span class="contact__card-title">Linkedin</span>
+            </a>
           </div>
         </div>
         <div class="col-1">
           <div class="contact__card">
-            <img src="@/static/img/icon/mail-white.svg" alt="linkedin" />
-            <span class="contact__card-title">Mail</span>
+            <a href="mailto:contact@alexandresoares.fr">
+              <img src="@/static/img/icon/mail-white.svg" alt="linkedin" />
+              <span class="contact__card-title">Mail</span>
+            </a>
           </div>
         </div>
         <div class="col-1">
           <div class="contact__card">
-            <img src="@/static/img/icon/github-white.svg" alt="github" />
-            <span class="contact__card-title">Github</span>
+            <a href="https://github.com/alexandre-soares" target="_blank">
+              <img src="@/static/img/icon/github-white.svg" alt="github" />
+              <span class="contact__card-title">Github</span>
+            </a>
           </div>
         </div>
       </div>
@@ -67,6 +68,14 @@ export default {
     line-height: 1.6;
     font-size: 2rem;
     text-align: justify;
+  }
+
+  & h3 {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 2rem 0 5rem;
   }
 
   &__card {

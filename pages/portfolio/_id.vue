@@ -7,7 +7,7 @@
             {{ projects[this.$route.params.id - 1].name }}
           </h1>
           <div v-html="projects[this.$route.params.id - 1].description"></div>
-          <h2>Skills</h2>
+          <h2>Languages - Frameworks</h2>
           <div class="label__wrapper">
             <span
               v-for="(skill, index) in projects[this.$route.params.id - 1]
@@ -58,11 +58,11 @@ export default {
         {
           id: 1,
           name: "Laura SIBILLE's Portfolio",
-          skills: ['nuxtjs', 'sass'],
+          skills: ['html', 'sass', 'javascript', 'nuxtjs'],
           link: 'https://www.laurasibille.com/',
           github: false,
           description: `
-          <p>This is the website I created for the UX-UI Designer Laura SIBILLE</p>
+          <p>This is the website I created for the UX-UI Designer Laura SIBILLE.</p>
           `,
           featureImage: require('@/static/img/portfolio/laura-sibille/feature-image.png'),
           carouselImages: [],
@@ -70,11 +70,11 @@ export default {
         {
           id: 2,
           name: 'Color Steps',
-          skills: ['vuejs', 'css'],
+          skills: ['html', 'css', 'javascript', 'vuejs'],
           link: 'https://musing-edison-888771.netlify.app/',
           github: 'https://github.com/alexandre-soares/color-steps-vuejs',
           description: `
-          <p>A little application where you find colors between 2 selected colors</p>
+          <p>A little application where you find colors between 2 selected colors.</p>
           `,
           featureImage:
             'https://d33wubrfki0l68.cloudfront.net/6019aa270b38eb000785d37c/screenshot.png',
@@ -83,12 +83,12 @@ export default {
         {
           id: 3,
           name: 'Netflix Movie Api',
-          skills: ['vuejs', 'sass'],
+          skills: ['html', 'css', 'javascript', 'vuejs'],
           link: 'https://quirky-hugle-b33382.netlify.app',
           github:
             'https://github.com/alexandre-soares/netflix-movie-app-nuxtjs',
           description: `
-          <p>A Netflix like connected with a movie api</p>
+          <p>A Netflix visual connected with a movie api to display a list of movies.</p>
           `,
           featureImage:
             'https://d33wubrfki0l68.cloudfront.net/6019a986b355d60121acbf5f/screenshot.png',
@@ -98,11 +98,11 @@ export default {
         {
           id: 4,
           name: 'VueJS Music Player',
-          skills: ['vuejs', 'css'],
+          skills: ['html', 'css', 'javascript', 'vuejs'],
           link: 'https://elastic-euler-fa1143.netlify.app',
           github: 'https://github.com/alexandre-soares/vuejs-music-app',
           description: `
-          <p>A music player made with VueJS</p>
+          <p>A music player made with VueJS.</p>
           `,
           featureImage:
             'https://d33wubrfki0l68.cloudfront.net/6019accc4759ba0008e6c6c6/screenshot.png',
@@ -111,11 +111,11 @@ export default {
         {
           id: 5,
           name: 'VueJS Speed Writing App',
-          skills: ['vuejs', 'css'],
+          skills: ['html', 'css', 'javascript', 'vuejs'],
           link: 'https://jovial-roentgen-b0d6a0.netlify.app',
           github: 'https://github.com/alexandre-soares/speed-writing-vuejs',
           description: `
-          <p>An app where you can test your accuracy and speed writing while pressing inputs on your keyboard</p>
+          <p>An app where you can test your accuracy and speed writing while pressing inputs on your keyboard.</p>
           `,
           featureImage:
             'https://d33wubrfki0l68.cloudfront.net/6019aac81824b200074d8e16/screenshot.png',

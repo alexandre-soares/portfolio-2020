@@ -20,7 +20,7 @@ export default {
   components: { Intro, Hero, About, Portfolio, Contact },
   data() {
     return {
-      animate: false,
+      animate: true,
     }
   },
   mounted() {
