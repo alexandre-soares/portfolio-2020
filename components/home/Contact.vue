@@ -52,7 +52,7 @@ export default {
 
 <style lang="scss" scoped>
 .contact {
-  height: 60vh;
+  height: 100vh;
   padding: 0 10rem;
   display: flex;
   align-items: center;
@@ -81,6 +81,14 @@ export default {
   &__card {
     margin: 2rem;
     text-align: center;
+
+    & a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     & img {
       width: 100%;
       height: 100%;

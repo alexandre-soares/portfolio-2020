@@ -54,7 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 .about {
-  height: 60vh;
+  height: 100vh;
   padding: 0 10rem;
   display: flex;
   align-items: center;

@@ -32,7 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 .hero {
-  height: 60vh;
+  height: 70vh;
   padding: 0 10rem;
   display: flex;
   align-items: center;
