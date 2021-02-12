@@ -21,12 +21,18 @@
           </div>
           <h2>Links</h2>
           <div class="links__wrapper">
-            <a :href="projects[this.$route.params.id - 1].link" class="btn"
+            <a
+              :href="projects[this.$route.params.id - 1].link"
+              target="_blank"
+              class="btn"
               >Go to the website</a
             >
-            <a :href="projects[this.$route.params.id - 1].github"
+            <a
+              v-if="projects[this.$route.params.id - 1].github"
+              :href="projects[this.$route.params.id - 1].github"
+              target="_blank"
               ><img
-                src="@/static/img/icon/github.svg"
+                src="@/static/img/icon/github-white.svg"
                 alt="github"
                 class="icon"
             /></a>

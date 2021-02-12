@@ -3,8 +3,8 @@
     <div class="navbar">
       <div class="navbar__left">
         <ul class="navbar__list">
-          <nuxt-link to="/" class="navbar__item">Home</nuxt-link>
-          <li class="navbar__item">About</li>
+          <nuxt-link tag="li" to="/" class="navbar__item">Home</nuxt-link>
+          <nuxt-link tag="li" to="/" class="navbar__item">About</nuxt-link>
         </ul>
       </div>
       <div class="navbar__logo">
@@ -12,8 +12,8 @@
       </div>
       <div class="navbar__right">
         <ul class="navbar__list">
-          <li class="navbar__item">Portfolio</li>
-          <li class="navbar__item">Contact</li>
+          <nuxt-link tag="li" to="/" class="navbar__item">Portfolio</nuxt-link>
+          <nuxt-link tag="li" to="/" class="navbar__item">Contact</nuxt-link>
         </ul>
       </div>
     </div>

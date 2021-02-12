@@ -21,13 +21,23 @@
         <div class="col">
           <div class="row">
             <div class="col label__wrapper">
+              <h3>Languages</h3>
+              <span class="label label--html"><span>H</span>tml</span>
+              <span class="label label--css"><span>C</span>ss</span>
               <span class="label label--javascript"
                 ><span>J</span>avascript</span
               >
-              <span class="label label--vuejs"><span>V</span>ueJS</span>
-
-              <span class="label label--nuxtjs"><span>N</span>uxtJS</span>
               <span class="label label--sass"><span>S</span>ass</span>
+              <h3>Frameworks</h3>
+              <span class="label label--vuejs"><span>V</span>ueJS</span>
+              <span class="label label--nuxtjs"><span>N</span>uxtJS</span>
+              <h3>Softwares</h3>
+              <span class="label label--vscode"
+                ><span>V</span>isual Studio Code</span
+              >
+              <span class="label label--github"><span>G</span>ithub</span>
+              <span class="label label--nucleo"><span>N</span>ucleo</span>
+              <span class="label label--postman"><span>P</span>ostman</span>
             </div>
           </div>
         </div>
@@ -60,6 +70,18 @@ export default {
     line-height: 1.6;
     font-size: 2rem;
     text-align: justify;
+    margin-top: 0;
+  }
+
+  & h3 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 2rem 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 </style>

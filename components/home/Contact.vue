@@ -19,6 +19,26 @@
           </p>
         </div>
       </div>
+      <div class="row justify-content-center align-items-center">
+        <div class="col-1">
+          <div class="contact__card">
+            <img src="@/static/img/icon/linkedin-white.svg" alt="linkedin" />
+            <span class="contact__card-title">Linkedin</span>
+          </div>
+        </div>
+        <div class="col-1">
+          <div class="contact__card">
+            <img src="@/static/img/icon/mail-white.svg" alt="linkedin" />
+            <span class="contact__card-title">Mail</span>
+          </div>
+        </div>
+        <div class="col-1">
+          <div class="contact__card">
+            <img src="@/static/img/icon/github-white.svg" alt="github" />
+            <span class="contact__card-title">Github</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -47,6 +67,21 @@ export default {
     line-height: 1.6;
     font-size: 2rem;
     text-align: justify;
+  }
+
+  &__card {
+    margin: 2rem;
+    text-align: center;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__card-title {
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 1.4rem;
   }
 }
 </style>

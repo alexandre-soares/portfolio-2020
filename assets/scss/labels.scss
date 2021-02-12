@@ -1,6 +1,6 @@
 .label {
   background-color: white;
-  color: black;
+  color: white;
   padding: 1rem 3rem;
   font-size: 1.5rem;
   border-radius: 50rem;
@@ -17,23 +17,45 @@
     font-size: 2rem;
   }
 
+  &--html {
+    background: #e96329;
+  }
+
+  &--css {
+    background: #3595cf;
+  }
+
   &--javascript {
     background-color: #e4a126;
-    color: white;
   }
 
   &--vuejs {
     background: #00c58e;
-    color: white;
   }
 
   &--nuxtjs {
     background: #2f495e;
-    color: white;
   }
 
   &--sass {
     background: #ce6b9e;
-    color: white;
+  }
+
+  &--vscode {
+    background: linear-gradient(to right, #2385c4, #0f6baa);
+  }
+
+  &--github {
+    background: white;
+    color: black;
+  }
+
+  &--nucleo {
+    background: #5d88e7;
+    color: black;
+  }
+
+  &--postman {
+    background: #f76935;
   }
 }

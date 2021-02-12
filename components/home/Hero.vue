@@ -5,7 +5,7 @@
         <div class="col">
           <div class="hero__title">
             <h1>Alexandre SOARES</h1>
-            <h2>UX Engineer</h2>
+            <h2>VueJS Web Developper</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
               provident asperiores laudantium velit rerum? Maxime, hic. Odit,
