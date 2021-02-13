@@ -68,9 +68,9 @@ export default {
   }
 
   & h3 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin: 2rem 0;
 
     &:first-child {

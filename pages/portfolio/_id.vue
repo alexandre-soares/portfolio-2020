@@ -152,8 +152,9 @@ export default {
 
 <style lang="scss" scoped>
 .project {
-  height: 80vh;
+  height: 100vh;
   padding: 0 10rem;
+  margin-top: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -201,5 +202,25 @@ export default {
       margin: 2rem;
     }
   }
+}
+
+// VUE SLICK CAROUSEL
+
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 3rem !important;
+  height: 3rem !important;
+  padding: 0;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
 }
 </style>
