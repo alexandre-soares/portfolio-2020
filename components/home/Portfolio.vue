@@ -1,18 +1,18 @@
 <template>
-  <div class="portfolio">
+  <div id="portfolio" class="portfolio">
     <div class="container-fluid">
       <div class="row">
         <div class="col">
-          <h2 class="portfolio__title">Portfolio</h2>
+          <h2>Portfolio</h2>
         </div>
       </div>
       <div class="row">
         <nuxt-link
           v-for="project in projects"
           :key="project.id"
+          tag="a"
           :to="'/portfolio/' + project.id"
-          target="_blank"
-          class="col-4"
+          class="col-sm-12 col-lg-4"
         >
           <div class="card">
             <div class="card__img">
@@ -37,31 +37,27 @@ export default {
         {
           id: 1,
           name: "Laura SIBILLE's Portfolio",
-          featureImage: require('@/static/img/portfolio/laura-sibille/feature-image.png'),
+          featureImage: require('@/static/img/portfolio/laura-sibille-feature.png'),
         },
         {
           id: 2,
           name: 'Color Steps',
-          featureImage:
-            'https://d33wubrfki0l68.cloudfront.net/6019aa270b38eb000785d37c/screenshot.png',
+          featureImage: require('@/static/img/portfolio/color-step-feature.png'),
         },
         {
           id: 3,
           name: 'Netflix Movie Api',
-          featureImage:
-            'https://d33wubrfki0l68.cloudfront.net/6019a986b355d60121acbf5f/screenshot.png',
+          featureImage: require('@/static/img/portfolio/netflix-feature.png'),
         },
         {
           id: 4,
           name: 'VueJS Music Player',
-          featureImage:
-            'https://d33wubrfki0l68.cloudfront.net/6019accc4759ba0008e6c6c6/screenshot.png',
+          featureImage: require('@/static/img/portfolio/music-player-feature.png'),
         },
         {
           id: 5,
           name: 'VueJS Speed Writing App',
-          featureImage:
-            'https://d33wubrfki0l68.cloudfront.net/6019aac81824b200074d8e16/screenshot.png',
+          featureImage: require('@/static/img/portfolio/speed-writing-feature.png'),
         },
       ],
     }
@@ -77,10 +73,9 @@ export default {
   align-items: center;
   justify-content: center;
 
-  &__title {
-    font-size: 5rem;
-    font-weight: 200;
-    margin: 2rem 0 5rem;
+  @media only screen and (max-width: $bp-small) {
+    height: auto;
+    padding: 0 1.5rem;
   }
 }
 

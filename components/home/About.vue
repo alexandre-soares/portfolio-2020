@@ -1,13 +1,13 @@
 <template>
-  <div class="about">
+  <div id="about" class="about">
     <div class="container-fluid">
       <div class="row">
         <div class="col">
-          <h2 class="about__title">About Me</h2>
+          <h2>About Me</h2>
         </div>
       </div>
       <div class="row">
-        <div class="col">
+        <div class="col-sm-12 col-lg-6">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
             est sit fugit ut eligendi cum? Odio facilis provident voluptatum,
@@ -18,7 +18,7 @@
             consectetur sit quisquam?
           </p>
         </div>
-        <div class="col">
+        <div class="col-sm-12 col-lg-6">
           <div class="row">
             <div class="col label__wrapper">
               <h3>Languages</h3>
@@ -32,9 +32,7 @@
               <span class="label label--vuejs"><span>V</span>ueJS</span>
               <span class="label label--nuxtjs"><span>N</span>uxtJS</span>
               <h3>Softwares</h3>
-              <span class="label label--vscode"
-                ><span>V</span>isual Studio Code</span
-              >
+              <span class="label label--vscode"><span>V</span>S Code</span>
               <span class="label label--github"><span>G</span>ithub</span>
               <span class="label label--nucleo"><span>N</span>ucleo</span>
               <span class="label label--postman"><span>P</span>ostman</span>
@@ -59,16 +57,12 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  &__title {
-    font-size: 5rem;
-    font-weight: 200;
-    margin: 2rem 0 5rem;
+  @media only screen and (max-width: $bp-small) {
+    height: auto;
+    padding: 0 1.5rem;
   }
 
   & p {
-    line-height: 1.6;
-    font-size: 2rem;
     text-align: justify;
     margin-top: 0;
   }

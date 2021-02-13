@@ -50,6 +50,18 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 61%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 60%;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 58%;
+  }
 }
 
 *,
@@ -77,6 +89,21 @@ h4 {
   color: $secondary-color;
 }
 
+h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 3.5rem;
+  font-weight: 200;
+  margin: 2rem 0;
+}
+
+h3 {
+}
+
 a {
   color: $secondary-color;
   text-decoration: none;
@@ -84,7 +111,8 @@ a {
 
 p {
   margin: 0.5rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  line-height: 1.6;
 }
 
 img {

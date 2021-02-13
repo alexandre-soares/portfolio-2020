@@ -1,8 +1,8 @@
 <template>
-  <div class="hero">
+  <div id="hero" class="hero">
     <div class="container-fluid">
       <div class="row">
-        <div class="col">
+        <div class="col-sm-12 col-lg-4">
           <div class="hero__title">
             <h1>Alexandre SOARES</h1>
             <h2>VueJS Web Developper</h2>
@@ -14,7 +14,7 @@
             </p>
           </div>
         </div>
-        <div class="col">
+        <div class="col-lg">
           <div class="hero__img">
             <img src="" alt="" />
           </div>
@@ -32,30 +32,15 @@ export default {
 
 <style lang="scss" scoped>
 .hero {
-  height: 70vh;
+  height: 100vh;
   padding: 0 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  &__title {
-    & h1 {
-      font-size: 7rem;
-      margin: 2rem 0;
-      font-weight: 400;
-      letter-spacing: 1px;
-    }
-
-    & h2 {
-      font-size: 5rem;
-      font-weight: 200;
-      margin: 2rem 0 5rem;
-    }
-
-    & p {
-      line-height: 1.6;
-      font-size: 2rem;
-    }
+  @media only screen and (max-width: $bp-small) {
+    height: 100vh;
+    padding: 0 1.5rem;
   }
 }
 </style>

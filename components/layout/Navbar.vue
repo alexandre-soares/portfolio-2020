@@ -4,7 +4,12 @@
       <div class="navbar__left">
         <ul class="navbar__list">
           <nuxt-link tag="li" to="/" class="navbar__item">Home</nuxt-link>
-          <nuxt-link tag="li" to="/" class="navbar__item">About</nuxt-link>
+          <nuxt-link
+            :to="{ path: '/', hash: '#about' }"
+            tag="li"
+            class="navbar__item"
+            >About</nuxt-link
+          >
         </ul>
       </div>
       <div class="navbar__logo">
@@ -12,8 +17,18 @@
       </div>
       <div class="navbar__right">
         <ul class="navbar__list">
-          <nuxt-link tag="li" to="/" class="navbar__item">Portfolio</nuxt-link>
-          <nuxt-link tag="li" to="/" class="navbar__item">Contact</nuxt-link>
+          <nuxt-link
+            tag="li"
+            class="navbar__item"
+            :to="{ path: '/', hash: '#portfolio' }"
+            >Portfolio</nuxt-link
+          >
+          <nuxt-link
+            tag="li"
+            class="navbar__item"
+            :to="{ path: '/', hash: '#contact' }"
+            >Contact</nuxt-link
+          >
         </ul>
       </div>
     </div>
@@ -34,10 +49,26 @@ export default {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $primary-color;
+  width: 100vw;
   padding: 2rem 0;
+  z-index: 999;
 
   &__list {
     display: flex;
+  }
+
+  &__right {
+    margin-right: auto;
+    margin-left: 4rem;
+  }
+
+  &__left {
+    margin-left: auto;
+    margin-right: 4rem;
   }
 
   &__item {

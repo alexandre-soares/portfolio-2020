@@ -1,8 +1,8 @@
 <template>
   <div class="project">
     <div class="container-fluid">
-      <div class="row">
-        <div class="col">
+      <div class="row justify-content-between">
+        <div class="col-sm-12 col-lg-4">
           <h1 class="project__title">
             {{ projects[this.$route.params.id - 1].name }}
           </h1>
@@ -38,12 +38,17 @@
             /></a>
           </div>
         </div>
-        <div class="col">
-          <img
-            :src="projects[this.$route.params.id - 1].featureImage"
-            alt="img"
-            class="project__img"
-          />
+        <div class="col-sm-12 col-lg-6">
+          <VueSlickCarousel :arrows="true" :dots="true">
+            <img
+              v-for="(img, index) in projects[this.$route.params.id - 1]
+                .carouselImages"
+              :key="index"
+              :src="img"
+              alt="img"
+              class="project__img"
+            />
+          </VueSlickCarousel>
         </div>
       </div>
     </div>
@@ -51,7 +56,12 @@
 </template>
 
 <script>
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+// optional style for arrows & dots
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 export default {
+  components: { VueSlickCarousel },
   data() {
     return {
       projects: [
@@ -64,8 +74,12 @@ export default {
           description: `
           <p>This is the website I created for the UX-UI Designer Laura SIBILLE.</p>
           `,
-          featureImage: require('@/static/img/portfolio/laura-sibille/feature-image.png'),
-          carouselImages: [],
+          featureImage: require('@/static/img/portfolio/laura-sibille-feature.png'),
+          carouselImages: [
+            require('@/static/img/portfolio/carousel/laura-sibille/img1.png'),
+            require('@/static/img/portfolio/carousel/laura-sibille/img2.png'),
+            require('@/static/img/portfolio/carousel/laura-sibille/img3.png'),
+          ],
         },
         {
           id: 2,
@@ -76,9 +90,12 @@ export default {
           description: `
           <p>A little application where you find colors between 2 selected colors.</p>
           `,
-          featureImage:
-            'https://d33wubrfki0l68.cloudfront.net/6019aa270b38eb000785d37c/screenshot.png',
-          carouselImages: [],
+          featureImage: require('@/static/img/portfolio/color-step-feature.png'),
+          carouselImages: [
+            require('@/static/img/portfolio/carousel/color-steps/img1.png'),
+            require('@/static/img/portfolio/carousel/color-steps/img2.png'),
+            require('@/static/img/portfolio/carousel/color-steps/img3.png'),
+          ],
         },
         {
           id: 3,
@@ -90,9 +107,12 @@ export default {
           description: `
           <p>A Netflix visual connected with a movie api to display a list of movies.</p>
           `,
-          featureImage:
-            'https://d33wubrfki0l68.cloudfront.net/6019a986b355d60121acbf5f/screenshot.png',
-          carouselImages: [],
+          featureImage: require('@/static/img/portfolio/netflix-feature.png'),
+          carouselImages: [
+            require('@/static/img/portfolio/carousel/netflix-page/img1.png'),
+            require('@/static/img/portfolio/carousel/netflix-page/img2.png'),
+            require('@/static/img/portfolio/carousel/netflix-page/img3.png'),
+          ],
         },
 
         {
@@ -104,9 +124,10 @@ export default {
           description: `
           <p>A music player made with VueJS.</p>
           `,
-          featureImage:
-            'https://d33wubrfki0l68.cloudfront.net/6019accc4759ba0008e6c6c6/screenshot.png',
-          carouselImages: [],
+          featureImage: require('@/static/img/portfolio/music-player-feature.png'),
+          carouselImages: [
+            require('@/static/img/portfolio/music-player-feature.png'),
+          ],
         },
         {
           id: 5,
@@ -117,9 +138,11 @@ export default {
           description: `
           <p>An app where you can test your accuracy and speed writing while pressing inputs on your keyboard.</p>
           `,
-          featureImage:
-            'https://d33wubrfki0l68.cloudfront.net/6019aac81824b200074d8e16/screenshot.png',
-          carouselImages: [],
+          featureImage: require('@/static/img/portfolio/speed-writing-feature.png'),
+          carouselImages: [
+            require('@/static/img/portfolio/carousel/speed-writing/img1.png'),
+            require('@/static/img/portfolio/carousel/speed-writing/img2.png'),
+          ],
         },
       ],
     }
@@ -129,16 +152,21 @@ export default {
 
 <style lang="scss" scoped>
 .project {
-  height: 70vh;
+  height: 80vh;
   padding: 0 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: $bp-small) {
+    height: auto;
+    padding: 0 3rem;
+  }
+
   &__title {
     font-size: 5rem;
     font-weight: 200;
-    margin: 2rem 0 5rem;
+    margin: 0 0 3rem;
     letter-spacing: 2px;
   }
 

@@ -50,10 +50,10 @@ export default {
   }
 }
 
-.intro-text {
+.intro-text h1 {
   color: rgb(233, 233, 233);
   font-family: 'Aparey';
-  font-size: 4rem;
+  font-size: 5rem;
   line-height: 1.7;
 }
 

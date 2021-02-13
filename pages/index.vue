@@ -24,7 +24,11 @@ export default {
     }
   },
   mounted() {
-    if (this.animate) {
+    console.log(localStorage.getItem('animationend'))
+
+    if (localStorage.getItem('animationend')) {
+      return false
+    } else {
       const tl = gsap.timeline({ defaults: { ease: 'power1.out' } })
       tl.to('.text', { y: '0%', duration: 1, stagger: 1.2 })
       tl.to('.slider', { y: '-100%', duration: 1.5, delay: 0.5, stagger: 0.1 })
@@ -33,6 +37,10 @@ export default {
 
       tl.fromTo('.hero', { opacity: 0 }, { opacity: 1, duration: 1 })
       tl.fromTo('.about', { opacity: 0 }, { opacity: 1, duration: 1 })
+
+      setTimeout(() => {
+        localStorage.setItem('animationend', true)
+      }, 6000)
     }
   },
 }
