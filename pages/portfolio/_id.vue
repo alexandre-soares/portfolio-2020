@@ -105,7 +105,7 @@ export default {
           github:
             'https://github.com/alexandre-soares/netflix-movie-app-nuxtjs',
           description: `
-          <p>A Netflix visual connected with a movie api to display a list of movies.</p>
+          <p>A Netflix visual connected with a movie api to display a list of movies. The front page is just HTML and CSS. After clicking on the "watch" button, there is an api request with Axios to fetch movies from the movie database (TMDb).</p>
           `,
           featureImage: require('@/static/img/portfolio/netflix-feature.png'),
           carouselImages: [
@@ -123,6 +123,7 @@ export default {
           github: 'https://github.com/alexandre-soares/vuejs-music-app',
           description: `
           <p>A music player made with VueJS.</p>
+          <p>Use and manipulation of audio files</p>
           `,
           featureImage: require('@/static/img/portfolio/music-player-feature.png'),
           carouselImages: [
@@ -202,25 +203,5 @@ export default {
       margin: 2rem;
     }
   }
-}
-
-// VUE SLICK CAROUSEL
-
-.slick-prev,
-.slick-next {
-  font-size: 0;
-  line-height: 0;
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 3rem !important;
-  height: 3rem !important;
-  padding: 0;
-  transform: translate(0, -50%);
-  cursor: pointer;
-  color: transparent;
-  border: none;
-  outline: none;
-  background: transparent;
 }
 </style>

@@ -9,13 +9,10 @@
       <div class="row">
         <div class="col-sm-12 col-lg-6">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-            est sit fugit ut eligendi cum? Odio facilis provident voluptatum,
-            amet ducimus commodi pariatur magnam ipsam quia, libero veniam minus
-            nobis. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptates illum nihil autem, vel aperiam quis, ipsam suscipit,
-            earum repellat ea quod accusamus quia maiores ipsum quibusdam dolor
-            consectetur sit quisquam?
+            Reliable and versatile professional with solid work ethic who is
+            determined to produce quality products under deadline pressure.
+            Smoothly manages projects from concept to completion and is adept at
+            problem solving at ease working with team or independently.
           </p>
         </div>
         <div class="col-sm-12 col-lg-6">
@@ -52,7 +49,7 @@ export default {
 
 <style lang="scss" scoped>
 .about {
-  height: 100vh;
+  //height: 100vh;
   padding: 0 10rem;
   display: flex;
   align-items: center;

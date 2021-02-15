@@ -36,27 +36,27 @@ export default {
       projects: [
         {
           id: 1,
-          name: "Laura SIBILLE's Portfolio",
+          name: "NuxtJS - Laura SIBILLE's Portfolio",
           featureImage: require('@/static/img/portfolio/laura-sibille-feature.png'),
         },
         {
           id: 2,
-          name: 'Color Steps',
+          name: 'VueJS - Color Steps',
           featureImage: require('@/static/img/portfolio/color-step-feature.png'),
         },
         {
           id: 3,
-          name: 'Netflix Movie Api',
+          name: 'NuxtJS - Netflix Movie Api',
           featureImage: require('@/static/img/portfolio/netflix-feature.png'),
         },
         {
           id: 4,
-          name: 'VueJS Music Player',
+          name: 'VueJS - Music Player',
           featureImage: require('@/static/img/portfolio/music-player-feature.png'),
         },
         {
           id: 5,
-          name: 'VueJS Speed Writing App',
+          name: 'VueJS - Speed Writing App',
           featureImage: require('@/static/img/portfolio/speed-writing-feature.png'),
         },
       ],
@@ -67,7 +67,7 @@ export default {
 
 <style lang="scss" scoped>
 .portfolio {
-  height: 100vh;
+  //height: 100vh;
   padding: 0 10rem;
   display: flex;
   align-items: center;
@@ -104,8 +104,8 @@ export default {
 
   &__title {
     background-color: rgba(43, 43, 43, 0.801);
-    height: 100%;
-    width: 100%;
+    height: 100.5%;
+    width: 100.5%;
     position: absolute;
     top: 50%;
     left: 50%;

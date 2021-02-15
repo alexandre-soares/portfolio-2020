@@ -98,7 +98,7 @@ h1 {
 h2 {
   font-size: 3.5rem;
   font-weight: 200;
-  margin: 2rem 0;
+  margin: 2rem 0 4rem;
 }
 
 h3 {
@@ -111,8 +111,8 @@ a {
 
 p {
   margin: 0.5rem;
-  font-size: 1.8rem;
-  line-height: 1.6;
+  font-size: 1.9rem;
+  line-height: 1.7;
 }
 
 img {
@@ -205,5 +205,19 @@ img {
     transform: scale(1);
     opacity: 0;
   }
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>
