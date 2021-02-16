@@ -39,7 +39,7 @@
           </div>
         </div>
         <div class="col-sm-12 col-lg-6">
-          <VueSlickCarousel :arrows="true" :dots="true">
+          <VueSlickCarousel :arrows="true" v-bind="settings">
             <img
               v-for="(img, index) in projects[this.$route.params.id - 1]
                 .carouselImages"
@@ -146,6 +146,15 @@ export default {
           ],
         },
       ],
+      settings: {
+        dots: true,
+        dotsClass: 'slick-dots custom-dot-class',
+        edgeFriction: 0.35,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
     }
   },
 }
@@ -200,7 +209,7 @@ export default {
     justify-content: flex-start;
 
     & a {
-      margin: 2rem;
+      margin: 1rem;
     }
   }
 }

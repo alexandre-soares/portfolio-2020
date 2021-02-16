@@ -24,8 +24,6 @@ export default {
     }
   },
   mounted() {
-    console.log(localStorage.getItem('animationend'))
-
     if (localStorage.getItem('animationend')) {
       return false
     } else {

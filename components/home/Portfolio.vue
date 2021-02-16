@@ -121,6 +121,7 @@ export default {
       letter-spacing: 5px;
       font-weight: 200;
       text-align: center;
+      width: 80%;
     }
 
     &--end {

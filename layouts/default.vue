@@ -98,7 +98,7 @@ h1 {
 h2 {
   font-size: 3.5rem;
   font-weight: 200;
-  margin: 2rem 0 4rem;
+  margin: 2rem 0 2.5rem;
 }
 
 h3 {
@@ -219,5 +219,9 @@ img {
 /* .slide-fade-leave-active below version 2.1.8 */ {
   transform: translateX(10px);
   opacity: 0;
+}
+
+.slick-dots li button:before {
+  color: white !important;
 }
 </style>

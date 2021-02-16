@@ -2,9 +2,9 @@
   <div id="hero" class="hero">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-12 col-lg-7">
+        <div class="col-sm-12 col-lg-6">
           <div class="hero__title">
-            <h1><span class="text-flicker-in-glow">Alexandre SOARES</span></h1>
+            <h1>Alexandre SOARES</h1>
             <h2>VueJS Web Developper</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
@@ -12,11 +12,6 @@
               aspernatur nihil consectetur tempora velit deserunt? Quam
               laboriosam impedit, atque placeat sapiente assumenda.
             </p>
-          </div>
-        </div>
-        <div class="col-lg">
-          <div class="hero__img">
-            <img src="" alt="" />
           </div>
         </div>
       </div>

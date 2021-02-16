@@ -48,6 +48,26 @@
             :to="{ path: '/', hash: '#contact' }"
             >Contact</nuxt-link
           >
+          <a
+            href="https://www.linkedin.com/in/alex-ds-soares/"
+            target="_blank"
+            class="navbar__item navbar__icon"
+          >
+            <img src="@/static/img/icon/linkedin-white.svg" alt="linkedin" />
+          </a>
+          <a
+            href="mailto:contact@alexandresoares.fr"
+            class="navbar__item navbar__icon"
+          >
+            <img src="@/static/img/icon/mail-white.svg" alt="linkedin" />
+          </a>
+          <a
+            href="https://github.com/alexandre-soares"
+            target="_blank"
+            class="navbar__item navbar__icon"
+          >
+            <img src="@/static/img/icon/github-white.svg" alt="github" />
+          </a>
         </ul>
       </div>
     </div>
@@ -136,6 +156,12 @@ export default {
     background-position: 100%;
     transition: background-position 275ms ease, font-size 0.3s ease-in-out;
 
+    &:nth-child(5),
+    &:nth-child(6),
+    &:nth-child(7) {
+      margin: 0 1rem;
+    }
+
     &:last-child {
       margin-right: 0;
     }
@@ -161,11 +187,53 @@ export default {
     height: 1rem;
     width: 1rem;
   }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+  }
 }
 
 .navbar.navbar--hidden .navbar__logo {
   height: 4rem;
   width: 4rem;
   transition: all 0.3s ease-in-out;
+}
+
+.link {
+  /* RESET */
+  text-decoration: none;
+  line-height: 1;
+
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  padding: 5px 5px;
+  overflow: hidden;
+  color: #333;
+  vertical-align: bottom;
+  transition: color 0.3s ease-out;
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transform: translateY(calc(100% - 2px));
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+  transition: transform 0.25s ease-out;
+}
+
+.link:hover {
+  color: #fff;
+}
+.link:hover::before {
+  transform: translateY(0);
+  transition: transform 0.25s ease-out;
 }
 </style>
