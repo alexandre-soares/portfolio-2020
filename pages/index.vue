@@ -2,6 +2,8 @@
   <div>
     <Intro v-if="animate" />
     <Hero />
+    <Featured-projects />
+    <Other-projects />
     <About />
     <Portfolio />
     <Contact />
@@ -13,14 +15,15 @@ import gsap from 'gsap'
 import Hero from '../components/home/Hero.vue'
 import Intro from '../components/home/Intro.vue'
 import About from '../components/home/About.vue'
-import Portfolio from '../components/home/Portfolio.vue'
 import Contact from '../components/home/Contact.vue'
+import FeaturedProjects from '../components/home/FeaturedProjects.vue'
+import OtherProjects from '../components/home/OtherProjects.vue'
 
 export default {
-  components: { Intro, Hero, About, Portfolio, Contact },
+  components: { Intro, Hero, About, Contact, FeaturedProjects, OtherProjects },
   data() {
     return {
-      animate: true,
+      animate: false,
     }
   },
   mounted() {

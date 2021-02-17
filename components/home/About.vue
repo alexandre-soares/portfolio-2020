@@ -1,10 +1,9 @@
 <template>
   <div id="about" class="about">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col">
-          <h2>About Me</h2>
-        </div>
+    <div class="container">
+      <div class="row align-items-center">
+        <span class="title-line"></span>
+        <h2>About Me</h2>
       </div>
       <div class="row">
         <div class="col-sm-12 col-lg-6">
@@ -49,6 +48,7 @@ export default {
 
 <style lang="scss" scoped>
 .about {
+  background-color: $dark-blue;
   //height: 100vh;
   padding: 0 10rem;
   display: flex;

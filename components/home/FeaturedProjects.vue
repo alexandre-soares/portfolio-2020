@@ -1,54 +1,44 @@
 <template>
-  <div class="project">
-    <div class="container-fluid">
-      <div class="row justify-content-between">
-        <div class="col-sm-12 col-lg-4">
-          <h1 class="project__title">
-            {{ projects[this.$route.params.id - 1].name }}
-          </h1>
-          <div v-html="projects[this.$route.params.id - 1].description"></div>
-          <h2>Languages - Frameworks</h2>
-          <div class="label__wrapper">
-            <span
-              v-for="(skill, index) in projects[this.$route.params.id - 1]
-                .skills"
-              :key="index"
-              class="label"
-              :class="'label--' + skill"
-            >
-              {{ skill }}
-            </span>
+  <div class="featured-projects">
+    <div class="container">
+      <div class="row align-items-center">
+        <span class="title-line"></span>
+        <h2>Featured Projects</h2>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div v-for="project in projects" :key="project.id" class="project">
+            <div class="row">
+              <div class="col-lg-6 project__infos">
+                <h4 class="project__title">{{ project.name }}</h4>
+                <p class="project__paragraph" v-html="project.description"></p>
+                <div class="project__labels">
+                  <div
+                    v-for="(skill, index) in project.skills"
+                    :key="index"
+                    class="project__label label"
+                  >
+                    {{ skill }}
+                  </div>
+                </div>
+                <div class="project__links">
+                  <a :href="project.link">View the project</a>
+                  <a :href="project.github">Github</a>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <VueSlickCarousel :arrows="true" v-bind="settings">
+                  <img
+                    v-for="(img, index) in project.carouselImages"
+                    :key="index"
+                    :src="img"
+                    alt="img"
+                    class="project__img"
+                  />
+                </VueSlickCarousel>
+              </div>
+            </div>
           </div>
-          <h2>Links</h2>
-          <div class="links__wrapper">
-            <a
-              :href="projects[this.$route.params.id - 1].link"
-              target="_blank"
-              class="btn"
-              >Go to the website</a
-            >
-            <a
-              v-if="projects[this.$route.params.id - 1].github"
-              :href="projects[this.$route.params.id - 1].github"
-              target="_blank"
-              ><img
-                src="@/static/img/icon/github-white.svg"
-                alt="github"
-                class="icon"
-            /></a>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-6">
-          <VueSlickCarousel :arrows="true" v-bind="settings">
-            <img
-              v-for="(img, index) in projects[this.$route.params.id - 1]
-                .carouselImages"
-              :key="index"
-              :src="img"
-              alt="img"
-              class="project__img"
-            />
-          </VueSlickCarousel>
         </div>
       </div>
     </div>
@@ -64,6 +54,17 @@ export default {
   components: { VueSlickCarousel },
   data() {
     return {
+      settings: {
+        dots: true,
+        dotsClass: 'slick-dots custom-dot-class',
+        edgeFriction: 0.35,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: false,
+        nextArrow: false,
+      },
       projects: [
         {
           id: 1,
@@ -146,70 +147,42 @@ export default {
           ],
         },
       ],
-      settings: {
-        dots: true,
-        dotsClass: 'slick-dots custom-dot-class',
-        edgeFriction: 0.35,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
     }
   },
 }
 </script>
 
 <style lang="scss" scoped>
+.featured-projects {
+  z-index: 999;
+}
+
 .project {
-  height: 100vh;
-  padding: 0 10rem;
-  margin-top: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @media only screen and (max-width: $bp-small) {
-    height: auto;
-    padding: 0 3rem;
+  margin: 10rem 0;
+  &__infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-  &__title {
-    font-size: 5rem;
-    font-weight: 200;
-    margin: 0 0 3rem;
-    letter-spacing: 2px;
+  &__img {
+    border-radius: 1.5rem;
+    overflow: hidden;
   }
 
-  & h2 {
-    font-size: 3rem;
-    font-weight: 400;
-    letter-spacing: 2px;
-  }
-
-  & ::v-deep p {
-    line-height: 1.6;
-    font-size: 2rem;
-    margin: 2rem 0 4rem;
+  &__paragraph {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    width: 85%;
     text-align: justify;
   }
-}
 
-.label {
-  &__wrapper {
-    text-align: left;
-    margin: 3rem 0;
-  }
-}
-
-.links {
-  &__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
+  &__links {
     & a {
-      margin: 1rem;
+      padding: 1rem 2rem;
+      margin-right: 2rem;
+      font-size: 1.6rem;
+      border-bottom: 1px solid $light-red;
     }
   }
 }

@@ -111,7 +111,7 @@ a {
 
 p {
   margin: 0.5rem;
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   line-height: 1.7;
 }
 
@@ -221,7 +221,21 @@ img {
   opacity: 0;
 }
 
+// STYLE CAROUSEL
+
 .slick-dots li button:before {
-  color: white !important;
+  color: $light-red !important;
+  font-size: 1.8rem !important;
+  margin-right: 2rem;
+}
+
+// Title Lines
+
+.title-line {
+  width: 50px;
+  height: 2px;
+  display: inline-block;
+  border: 1px solid white;
+  margin-right: 30px;
 }
 </style>
