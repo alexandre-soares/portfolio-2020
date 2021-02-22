@@ -1,5 +1,5 @@
 <template>
-  <div class="featured-projects">
+  <div id="portfolio" class="featured-projects">
     <div class="container">
       <div class="row align-items-center">
         <span class="title-line"></span>
@@ -22,12 +22,16 @@
                   </div>
                 </div>
                 <div class="project__links">
-                  <a :href="project.link">View the project</a>
-                  <a :href="project.github">Github</a>
+                  <a target="_blank" :href="project.link">View the project</a>
+                  <a target="_blank" :href="project.github">Github</a>
                 </div>
               </div>
               <div class="col-lg-6">
-                <VueSlickCarousel :arrows="true" v-bind="settings">
+                <VueSlickCarousel
+                  :arrows="true"
+                  :autoplay="true"
+                  v-bind="settings"
+                >
                   <img
                     v-for="(img, index) in project.carouselImages"
                     :key="index"
@@ -163,6 +167,10 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 2.6rem;
   }
 
   &__img {

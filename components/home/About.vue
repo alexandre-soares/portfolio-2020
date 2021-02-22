@@ -50,7 +50,7 @@ export default {
 .about {
   background-color: $dark-blue;
   //height: 100vh;
-  padding: 0 10rem;
+  padding: 5rem 10rem;
   display: flex;
   align-items: center;
   justify-content: center;

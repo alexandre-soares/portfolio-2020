@@ -1,17 +1,14 @@
 <template>
   <div id="contact" class="contact">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col">
-          <h2>Contact</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <h3>Interested? Do not hesitate to contact me!</h3>
-        </div>
+    <div class="container">
+      <div class="row align-items-center">
+        <span class="title-line"></span>
+        <h2>Contact</h2>
       </div>
       <div class="row justify-content-center align-items-center">
+        <div class="col-12">
+          <h3>Interested? Do not hesitate to contact me!</h3>
+        </div>
         <div class="col-2 col-lg-1">
           <div class="contact__card">
             <a
