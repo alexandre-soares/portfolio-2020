@@ -50,6 +50,15 @@ export default {
           github: 'https://github.com/alexandre-soares/trello-clone',
           featureImage: require('@/static/img/portfolio/trello-clone-feature.png'),
         },
+        {
+          id: 3,
+          name: 'Beatmaker Javascript',
+          skills: ['html', 'sass', 'javascript'],
+          link: 'https://unruffled-poitras-e30bcb.netlify.app/',
+          github:
+            'https://github.com/alexandre-soares/beatmaker-vanillajshttps://github.com/alexandre-soares/beatmaker-vanillajs',
+          featureImage: require('@/static/img/portfolio/beatmaker-js-feature.png'),
+        },
       ],
     }
   },

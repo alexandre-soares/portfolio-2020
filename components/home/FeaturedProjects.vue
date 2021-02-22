@@ -27,11 +27,7 @@
                 </div>
               </div>
               <div class="col-lg-6">
-                <VueSlickCarousel
-                  :arrows="true"
-                  :autoplay="true"
-                  v-bind="settings"
-                >
+                <VueSlickCarousel :arrows="true" v-bind="settings">
                   <img
                     v-for="(img, index) in project.carouselImages"
                     :key="index"
