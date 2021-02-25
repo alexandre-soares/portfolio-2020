@@ -158,7 +158,7 @@ export default {
 }
 
 .project {
-  margin: 10rem 0;
+  margin: 20rem 0;
   &__infos {
     display: flex;
     flex-direction: column;
