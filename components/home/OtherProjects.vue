@@ -1,7 +1,7 @@
 <template>
   <div class="other-projects">
     <div class="container">
-      <div class="row align-items-center">
+      <div class="row align-items-center section-title">
         <span class="title-line"></span>
         <h2>Other Projects</h2>
       </div>
@@ -9,7 +9,7 @@
         <div
           v-for="project in projects"
           :key="project.id"
-          class="project col-4"
+          class="project col-sm-12 col-lg-4"
         >
           <div class="project__card">
             <div

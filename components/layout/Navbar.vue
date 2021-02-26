@@ -1,7 +1,10 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="navbar" :class="{ 'navbar--hidden': !showNavbar }">
+      <div
+        class="navbar"
+        :class="!showNavbar ? 'navbar--hidden' : 'navbar--open'"
+      >
         <div class="navbar__logo">
           <a href="/">
             <img
@@ -52,6 +55,9 @@
             <img src="@/static/img/icon/github-white.svg" alt="github" />
           </a>
         </ul>
+        <div class="navbar__button" @click="showNavbar = !showNavbar">
+          <span class="navicon"></span>
+        </div>
       </div>
     </div>
   </div>
@@ -63,7 +69,7 @@ export default {
   data() {
     return {
       reduceLogo: false,
-      showNavbar: true,
+      showNavbar: false,
       lastScrollPosition: 0,
     }
   },
@@ -107,6 +113,10 @@ export default {
   z-index: 999;
   transition: all 0.3s ease-in-out;
 
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
+
   &.navbar--hidden {
     padding: 2rem 11.5rem;
 
@@ -117,6 +127,10 @@ export default {
 
   &__list {
     display: flex;
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -152,12 +166,23 @@ export default {
     &:hover {
       background-position: 0 100%;
     }
+
+    @media only screen and (max-width: $bp-small) {
+      text-align: center;
+      margin: 2rem auto;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+    }
   }
 
   &__logo {
     width: 5rem;
     height: 5rem;
     margin-right: auto;
+
+    @media only screen and (max-width: $bp-small) {
+      margin: auto;
+    }
   }
 
   &__logo--svg {
@@ -175,13 +200,72 @@ export default {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
+
+    @media only screen and (max-width: $bp-small) {
+      margin: 2rem auto !important;
+      width: 3rem;
+      height: 3rem;
+      text-align: center;
+    }
+  }
+
+  &__button {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 1rem;
+    right: 1rem;
+    margin: auto;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-small) {
+      display: flex;
+    }
+
+    & .navicon {
+      background: white;
+      display: block;
+      height: 2px;
+      position: relative;
+      transition: background 0.2s ease-out;
+      width: 2.5rem;
+
+      &:before,
+      &:after {
+        background: white;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all 0.2s ease-out;
+        width: 100%;
+      }
+
+      &:before {
+        top: 8px;
+      }
+
+      &:after {
+        top: -8px;
+      }
+    }
   }
 }
 
-.navbar.navbar--hidden .navbar__logo {
-  height: 4rem;
-  width: 4rem;
-  transition: all 0.3s ease-in-out;
+.navbar.navbar--hidden {
+  & .navbar__logo {
+    height: 6rem;
+    width: 6rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  & .navbar__list {
+    display: none;
+  }
 }
 
 .link {
@@ -218,5 +302,22 @@ export default {
 .link:hover::before {
   transform: translateY(0);
   transition: transform 0.25s ease-out;
+}
+
+.navbar--open .navicon {
+  background: transparent;
+}
+
+.navbar--open .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.navbar--open .navicon:after {
+  transform: rotate(45deg);
+}
+
+.navbar--open:not(.steps) .navicon:before,
+.navbar--open:not(.steps) .navicon:after {
+  top: 0;
 }
 </style>

@@ -51,6 +51,7 @@ export default {
 
   @media only screen and (max-width: $bp-small) {
     height: 100vh;
+    text-align: center;
     padding: 0 1.5rem;
   }
 }

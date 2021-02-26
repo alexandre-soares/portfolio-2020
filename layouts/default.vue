@@ -229,7 +229,18 @@ img {
   margin-right: 2rem;
 }
 
+.slick-slider {
+  width: 80%;
+  margin: 0 auto;
+}
+
 // Title Lines
+
+.section-title {
+  @media only screen and (max-width: $bp-small) {
+    margin: 0 auto;
+  }
+}
 
 .title-line {
   width: 50px;

@@ -1,7 +1,7 @@
 <template>
   <div id="portfolio" class="featured-projects">
     <div class="container">
-      <div class="row align-items-center">
+      <div class="row align-items-center section-title">
         <span class="title-line"></span>
         <h2>Featured Projects</h2>
       </div>
@@ -159,6 +159,11 @@ export default {
 
 .project {
   margin: 20rem 0;
+
+  @media only screen and (max-width: $bp-small) {
+    margin: 3rem 0 10rem;
+  }
+
   &__infos {
     display: flex;
     flex-direction: column;
@@ -167,6 +172,11 @@ export default {
 
   &__title {
     font-size: 2.6rem;
+
+    @media only screen and (max-width: $bp-small) {
+      text-align: center;
+      margin: 2rem 0;
+    }
   }
 
   &__img {
@@ -179,6 +189,9 @@ export default {
     line-height: 1.4;
     width: 85%;
     text-align: justify;
+    @media only screen and (max-width: $bp-small) {
+      width: 90%;
+    }
   }
 
   &__links {
@@ -187,6 +200,13 @@ export default {
       margin-right: 2rem;
       font-size: 1.6rem;
       border-bottom: 1px solid $light-red;
+
+      @media only screen and (max-width: $bp-small) {
+        margin: 3rem;
+        display: block;
+        text-align: center;
+        width: 90%;
+      }
     }
   }
 }
