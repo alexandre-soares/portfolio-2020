@@ -25,8 +25,8 @@
                   <button type="button">
                     <a target="_blank" :href="project.link">Website</a>
                   </button>
-                  <button type="button">
-                    <a target="_blank" v-if="project.github" :href="project.github">Github</a>
+                  <button type="button" v-if="project.github">
+                    <a target="_blank" :href="project.github">Github</a>
                   </button>
                 </div>
               </div>
