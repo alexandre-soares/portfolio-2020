@@ -3,10 +3,10 @@
     <div class="intro">
       <div class="intro-text">
         <h1 class="hide">
-          <span class="text">When Design</span>
+          <span class="text">Meet your</span>
         </h1>
         <h1 class="hide">
-          <span class="text">Meets Productivity</span>
+          <span class="text">New Developer</span>
         </h1>
       </div>
     </div>

@@ -22,8 +22,12 @@
                   </div>
                 </div>
                 <div class="project__links">
-                  <a target="_blank" :href="project.link">View the project</a>
-                  <a target="_blank" :href="project.github">Github</a>
+                  <button type="button">
+                    <a target="_blank" :href="project.link">Website</a>
+                  </button>
+                  <button type="button">
+                    <a target="_blank" v-if="project.github" :href="project.github">Github</a>
+                  </button>
                 </div>
               </div>
               <div class="col-lg-6">
@@ -189,17 +193,21 @@ export default {
     line-height: 1.4;
     width: 85%;
     text-align: justify;
+
     @media only screen and (max-width: $bp-small) {
-      width: 90%;
+      width: 100%;
+    }
+  }
+
+  &__labels {
+
+    @media only screen and (max-width: $bp-small) {
+      margin: 0 auto;
     }
   }
 
   &__links {
-    & a {
-      padding: 1rem 2rem;
-      margin-right: 2rem;
-      font-size: 1.6rem;
-      border-bottom: 1px solid $light-red;
+    margin: 5rem 0;
 
       @media only screen and (max-width: $bp-small) {
         margin: 3rem;
@@ -209,5 +217,71 @@ export default {
       }
     }
   }
+
+
+button {
+  margin: 0 2rem;
+  font-size: 1.6rem;
+  font-family: 'Hind Guntur', sans-serif;
+  line-height: 1;
+  letter-spacing: 0.025em;
+  padding: 1.1rem;
+  cursor: pointer;
+  color: white;
+  border: 0;
+  border-bottom: 1px solid $light-red;
+  border-radius: 2px;
+  min-width: 12rem;
+  overflow: hidden;
+  position: relative;
+  background-color: transparent;
+}
+
+button a {
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+button:after,
+button:before {
+  padding: 1.1rem 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(-100% - 30px);
+  height: 100%;
+  width: calc(100% + 20px);
+  color: #fff;
+  border-radius: 2px;
+  transform: skew(-25deg);
+}
+
+button:after {
+  background: #fff;
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+button:before {
+  background: $light-red;
+  z-index: 5;
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+button:hover a {
+  color: white !important;
+}
+
+button:hover:after {
+  left: calc(0% - 10px);
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+button:hover:before {
+  left: calc(0% - 10px);
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 </style>
+

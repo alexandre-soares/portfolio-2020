@@ -9,7 +9,7 @@
         <div class="col-12">
           <h3>Interested? Do not hesitate to contact me!</h3>
         </div>
-        <div class="col-sm-2 col-lg-1">
+        <div class="col-sm-3 col-lg-1">
           <div class="contact__card">
             <a
               href="https://www.linkedin.com/in/alex-ds-soares/"
@@ -20,7 +20,7 @@
             </a>
           </div>
         </div>
-        <div class="col-sm-2 col-lg-1">
+        <div class="col-sm-3 col-lg-1">
           <div class="contact__card">
             <a href="mailto:contact@alexandresoares.fr">
               <img src="@/static/img/icon/mail-white.svg" alt="linkedin" />
@@ -28,7 +28,7 @@
             </a>
           </div>
         </div>
-        <div class="col-sm-2 col-lg-1">
+        <div class="col-sm-3 col-lg-1">
           <div class="contact__card">
             <a href="https://github.com/alexandre-soares" target="_blank">
               <img src="@/static/img/icon/github-white.svg" alt="github" />

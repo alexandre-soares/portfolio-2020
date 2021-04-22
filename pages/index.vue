@@ -5,7 +5,6 @@
     <Featured-projects />
     <Other-projects />
     <About />
-    <Portfolio />
     <Contact />
   </div>
 </template>

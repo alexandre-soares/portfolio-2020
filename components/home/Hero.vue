@@ -5,7 +5,7 @@
         <div class="order-sm-12 order-lg-1 col-sm-12 col-lg-7">
           <div class="hero__title">
             <h1>Alexandre SOARES</h1>
-            <h2>VueJS Web Developper</h2>
+            <h2>VueJS Web Developer</h2>
           </div>
         </div>
         <div class="order-sm-1 order-lg-12 col-sm-12 col-lg-5">
@@ -42,6 +42,12 @@ export default {
   */
 
   &__title {
+
+    @media only screen and (max-width: $bp-small) {
+      text-align: center;
+      display: block;
+      margin: 2rem auto;
+  }
   }
 
   &__img {
