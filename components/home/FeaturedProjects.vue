@@ -22,12 +22,12 @@
                   </div>
                 </div>
                 <div class="project__links">
-                  <button type="button">
-                    <a target="_blank" :href="project.link">Website</a>
-                  </button>
-                  <button type="button" v-if="project.github">
-                    <a target="_blank" :href="project.github">Github</a>
-                  </button>
+                  <a target="_blank" :href="project.link">
+                    <button type="button">Website</button>
+                  </a>
+                  <a target="_blank" :href="project.github">
+                    <button type="button" v-if="project.github">Github</button>
+                  </a>
                 </div>
               </div>
               <div class="col-lg-6">
@@ -162,7 +162,7 @@ export default {
 }
 
 .project {
-  margin: 20rem 0;
+  margin: 5rem 0;
 
   @media only screen and (max-width: $bp-small) {
     margin: 3rem 0 10rem;
@@ -227,7 +227,7 @@ button {
   letter-spacing: 0.025em;
   padding: 1.1rem;
   cursor: pointer;
-  color: white;
+  color: white !important;
   border: 0;
   border-bottom: 1px solid $light-red;
   border-radius: 2px;
