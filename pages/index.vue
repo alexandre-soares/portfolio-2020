@@ -1,31 +1,19 @@
 <template>
   <div>
-    <Intro v-if="animate" />
-    <Hero />
-    <Featured-projects />
-    <Other-projects />
-    <About />
-    <Contact />
+    <Intro />
   </div>
 </template>
 
 <script>
-import gsap from 'gsap'
-import Hero from '../components/home/Hero.vue'
 import Intro from '../components/home/Intro.vue'
-import About from '../components/home/About.vue'
-import Contact from '../components/home/Contact.vue'
-import FeaturedProjects from '../components/home/FeaturedProjects.vue'
-import OtherProjects from '../components/home/OtherProjects.vue'
 
 export default {
-  components: { Intro, Hero, About, Contact, FeaturedProjects, OtherProjects },
+  components: { Intro },
   data() {
-    return {
-      animate: false,
-    }
+    return {}
   },
   mounted() {
+    /*
     if (localStorage.getItem('animationend')) {
       return false
     } else {
@@ -42,6 +30,7 @@ export default {
         localStorage.setItem('animationend', true)
       }, 6000)
     }
+    */
   },
 }
 </script>
