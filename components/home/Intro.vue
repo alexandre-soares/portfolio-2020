@@ -14,14 +14,14 @@
 </template>
 
 <script>
-import gsap from 'gsap';
+import gsap from 'gsap'
 export default {
   name: 'Intro',
-  mounted () {
+  mounted() {
     const tl = gsap.timeline({ defaults: { ease: 'power1.out' } })
-      tl.to('.text', { y: '0%', duration: 1.3, stagger: 1.2 })
-      tl.to('.slider', { x: '100%', duration: 1.1, delay: 0.5, stagger: 0.1 })
-      tl.to('.intro', { y: '-100%', duration: 1 }, '-=1')
+    tl.to('.text', { y: '0%', duration: 1.3, stagger: 1.2 })
+    tl.to('.slider', { x: '100%', duration: 1.1, delay: 0.5, stagger: 0.1 })
+    tl.to('.intro', { y: '-100%', duration: 1 }, '-=1')
   },
 }
 </script>
@@ -48,7 +48,7 @@ export default {
   height: 100%;
   transform: translateX(-100%);
   z-index: 998;
-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 
   &--white {
     z-index: 997;
