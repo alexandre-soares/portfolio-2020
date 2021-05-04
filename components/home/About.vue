@@ -1,43 +1,31 @@
 <template>
-  <div id="about" class="about">
+  <section class="about__wrapper">
     <div class="container">
-      <div class="row align-items-center">
-        <span class="title-line"></span>
-        <h2>About Me</h2>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 col-lg-6">
+      <div class="about">
+        <div>
+          <h1>Reliable. Versatile.</h1>
           <p>
-            Reliable and versatile professional with solid work ethic who is
+            With solid work ethic I'm
             determined to produce quality products under deadline pressure.
-            Smoothly manages projects from concept to completion and is adept at
+            I smoothly manages projects from concept to completion and i'm adept at
             problem solving at ease working with team or independently.
           </p>
+          <span class="label label--sass"><span>S</span>ass</span>
+          <span class="label label--javascript"><span>J</span>avascript</span>
+          <span class="label label--vuejs"><span>V</span>ueJS</span>
+          <span class="label label--nuxtjs"><span>N</span>uxtJS</span>
+          <br />
+          <span class="label label--vscode"><span>V</span>S Code</span>
+          <span class="label label--github"><span>G</span>ithub</span>
+          <span class="label label--nucleo"><span>N</span>ucleo</span>
+          <span class="label label--postman"><span>P</span>ostman</span>
         </div>
-        <div class="col-sm-12 col-lg-6">
-          <div class="row">
-            <div class="col label__wrapper">
-              <h3>Languages</h3>
-              <span class="label label--html"><span>H</span>tml</span>
-              <span class="label label--css"><span>C</span>ss</span>
-              <span class="label label--javascript"
-                ><span>J</span>avascript</span
-              >
-              <span class="label label--sass"><span>S</span>ass</span>
-              <h3>Frameworks</h3>
-              <span class="label label--vuejs"><span>V</span>ueJS</span>
-              <span class="label label--nuxtjs"><span>N</span>uxtJS</span>
-              <h3>Softwares</h3>
-              <span class="label label--vscode"><span>V</span>S Code</span>
-              <span class="label label--github"><span>G</span>ithub</span>
-              <span class="label label--nucleo"><span>N</span>ucleo</span>
-              <span class="label label--postman"><span>P</span>ostman</span>
-            </div>
-          </div>
+        <div class="about__background">
+          <img src="@/static/img/background/me.png" alt="background" />
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -48,31 +36,35 @@ export default {
 
 <style lang="scss" scoped>
 .about {
-  background-color: $dark-blue;
-  //height: 100vh;
-  padding: 5rem 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @media only screen and (max-width: $bp-small) {
-    height: auto;
-    padding: 0 1.5rem;
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+
+  &__wrapper {
+    padding: 5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @media only screen and (max-width: $bp-small) {
+      height: auto;
+      padding: 0 1.5rem;
+    }
+  }
+
+  &__background {
+    border-left: 3rem solid #000046;
+  }
+
+  & h1 {
+    font-size: 3.9rem;
+    margin: 3rem 0;
   }
 
   & p {
     text-align: justify;
-    margin-top: 0;
-  }
-
-  & h3 {
-    font-size: 2.2rem;
-    font-weight: 400;
-    letter-spacing: 3px;
-    margin: 2rem 0;
-
-    &:first-child {
-      margin-top: 0;
-    }
+    margin: 3rem 0;
   }
 }
 </style>

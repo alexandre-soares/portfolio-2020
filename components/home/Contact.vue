@@ -1,43 +1,23 @@
 <template>
-  <div id="contact" class="contact">
+  <div class="contact">
     <div class="container">
-      <div class="row align-items-center">
-        <span class="title-line"></span>
-        <h2>Contact</h2>
-      </div>
-      <div class="row justify-content-center align-items-center">
-        <div class="col-12">
-          <h3>Interested? Do not hesitate to contact me!</h3>
+      <h3>Feel free to contact me!</h3>
+      <div class="contact__links">
+        <div class="contact__card">
+          <a href="https://www.linkedin.com/in/alex-ds-soares/" target="_blank">
+            <img src="@/static/img/icon/linkedin-white.svg" alt="linkedin" />
+            <span class="contact__card-title">Linkedin</span>
+          </a>
         </div>
-        <div class="col-sm-3 col-lg-1">
-          <div class="contact__card">
-            <a
-              href="https://www.linkedin.com/in/alex-ds-soares/"
-              target="_blank"
-            >
-              <img src="@/static/img/icon/linkedin-white.svg" alt="linkedin" />
-              <span class="contact__card-title">Linkedin</span>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-3 col-lg-1">
-          <div class="contact__card">
-            <a href="mailto:contact@alexandresoares.fr">
-              <img src="@/static/img/icon/mail-white.svg" alt="linkedin" />
-              <span class="contact__card-title">Mail</span>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-3 col-lg-1">
-          <div class="contact__card">
-            <a href="https://github.com/alexandre-soares" target="_blank">
-              <img src="@/static/img/icon/github-white.svg" alt="github" />
-              <span class="contact__card-title">Github</span>
-            </a>
-          </div>
+        <div class="contact__card">
+          <a href="mailto:contact@alexandresoares.fr">
+            <img src="@/static/img/icon/mail-white.svg" alt="linkedin" />
+            <span class="contact__card-title">Mail</span>
+          </a>
         </div>
       </div>
     </div>
+    <span class="background-title">Contact</span>
   </div>
 </template>
 
@@ -50,15 +30,9 @@ export default {
 <style lang="scss" scoped>
 .contact {
   height: 100vh;
-  padding: 0 10rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-
-  @media only screen and (max-width: $bp-small) {
-    height: auto;
-    padding: 0 1.5rem;
-  }
 
   & p {
     line-height: 1.6;
@@ -75,6 +49,13 @@ export default {
     margin: 2rem 0;
   }
 
+  &__links {
+    width: 30%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
   &__card {
     margin: 2rem;
     text-align: center;
@@ -87,12 +68,8 @@ export default {
     }
 
     & img {
-      width: 100%;
-      height: 100%;
-
-      @media only screen and (max-width: $bp-small) {
-        width: 15%;
-      }
+      width: 4rem;
+      height: 4rem;
     }
   }
 

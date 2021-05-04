@@ -148,4 +148,14 @@ img {
   border: 1px solid white;
   margin-right: 30px;
 }
+
+// Background Title
+
+.background-title {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: rgba(78, 78, 78, 0.2);
+  font-size: 10rem;
+}
 </style>

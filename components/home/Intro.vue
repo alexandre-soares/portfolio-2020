@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section>
     <div class="intro">
       <div class="intro-text">
         <h1 class="hide">
@@ -8,9 +8,9 @@
       </div>
     </div>
     <div class="slider"></div>
-    <div class="slider slider--white"></div>
+    <div class="slider slider--orange"></div>
     <div class="slider slider--blue"></div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -19,8 +19,8 @@ export default {
   name: 'Intro',
   mounted() {
     const tl = gsap.timeline({ defaults: { ease: 'power1.out' } })
-    tl.to('.text', { y: '0%', duration: 1.3, stagger: 1.2 })
-    tl.to('.slider', { x: '100%', duration: 1.1, delay: 0.5, stagger: 0.1 })
+    tl.to('.text', { y: '0%', duration: 1.7, stagger: 1.2 })
+    tl.to('.slider', { x: '100%', duration: 1, delay: 0.5, stagger: 0.1 })
     tl.to('.intro', { y: '-100%', duration: 1 }, '-=1')
   },
 }
@@ -50,7 +50,7 @@ export default {
   z-index: 998;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 
-  &--white {
+  &--orange {
     z-index: 997;
     background: rgb(165, 121, 0);
   }
