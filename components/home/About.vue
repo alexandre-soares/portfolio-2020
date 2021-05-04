@@ -5,10 +5,10 @@
         <div>
           <h1>Reliable. Versatile.</h1>
           <p>
-            With solid work ethic I'm
-            determined to produce quality products under deadline pressure.
-            I smoothly manages projects from concept to completion and i'm adept at
-            problem solving at ease working with team or independently.
+            With solid work ethic I'm determined to produce quality products
+            under deadline pressure. I smoothly manages projects from concept to
+            completion and i'm adept at problem solving at ease working with
+            team or independently.
           </p>
           <span class="label label--sass"><span>S</span>ass</span>
           <span class="label label--javascript"><span>J</span>avascript</span>

@@ -19,9 +19,10 @@ export default {
   name: 'Intro',
   mounted() {
     const tl = gsap.timeline({ defaults: { ease: 'power1.out' } })
-    tl.to('.text', { y: '0%', duration: 1.7, stagger: 1.2 })
-    tl.to('.slider', { x: '100%', duration: 1, delay: 0.5, stagger: 0.1 })
-    tl.to('.intro', { y: '-100%', duration: 1 }, '-=1')
+    tl.to('.text', { y: '0%', duration: 1.4, })
+    tl.to('.slider', { x: '100%', duration: 1.1, stagger: 0.25, delay: 1.5 })
+    tl.to('.intro', { opacity: 0, duration: 1 })
+    tl.to('.intro', { y: '100%', duration: .1 })
   },
 }
 </script>
@@ -52,12 +53,12 @@ export default {
 
   &--orange {
     z-index: 997;
-    background: rgb(165, 121, 0);
+    background: #000046;
   }
 
   &--blue {
     z-index: 996;
-    background: rgb(43, 36, 133);
+    background: #1cb5e0;
   }
 }
 

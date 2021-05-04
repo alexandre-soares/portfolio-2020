@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Intro />
+    <Intro class="intro" />
     <Hero />
     <About />
     <Projects />
@@ -20,27 +20,11 @@ export default {
   data() {
     return {}
   },
-  mounted() {
-    /*
-    if (localStorage.getItem('animationend')) {
-      return false
-    } else {
-      const tl = gsap.timeline({ defaults: { ease: 'power1.out' } })
-      tl.to('.text', { y: '0%', duration: 1, stagger: 1.2 })
-      tl.to('.slider', { y: '-100%', duration: 1.5, delay: 0.5, stagger: 0.1 })
-      tl.to('.intro', { y: '-100%', duration: 1 }, '-=1')
-      tl.fromTo('.navbar', { opacity: 0 }, { opacity: 1, duration: 1 })
-
-      tl.fromTo('.hero', { opacity: 0 }, { opacity: 1, duration: 1 })
-      tl.fromTo('.about', { opacity: 0 }, { opacity: 1, duration: 1 })
-
-      setTimeout(() => {
-        localStorage.setItem('animationend', true)
-      }, 6000)
-    }
-    */
-  },
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.intro {
+  z-index: 999;
+}
+</style>

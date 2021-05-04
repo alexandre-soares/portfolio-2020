@@ -7,10 +7,13 @@
             <div
               class="project__img"
               :style="'background-image: url(' + project.featureImage + ')'"
-            >
-            </div>
+            ></div>
             <div class="project__title">{{ project.name }}</div>
-            <div class="project__description" v-html="project.description"></div>
+            <span class="label project__label">{{ project.skills }}</span>
+            <div
+              class="project__description"
+              v-html="project.description"
+            ></div>
             <div class="project__link">
               <button type="button">
                 <a target="_blank" :href="project.link">Website</a>
@@ -36,7 +39,7 @@ export default {
         {
           id: 1,
           name: "Laura SIBILLE's Portfolio",
-          skills: ['html', 'sass', 'javascript', 'nuxtjs'],
+          skills: 'nuxtjs',
           link: 'https://www.laurasibille.com/',
           github: false,
           description: `
@@ -52,7 +55,7 @@ export default {
         {
           id: 3,
           name: 'Netflix Movie Api',
-          skills: ['html', 'css', 'javascript', 'vuejs'],
+          skills: 'vuejs',
           link: 'https://quirky-hugle-b33382.netlify.app',
           github:
             'https://github.com/alexandre-soares/netflix-movie-app-nuxtjs',
@@ -68,8 +71,8 @@ export default {
         },
         {
           id: 4,
-          name: 'VueJS Music Player',
-          skills: ['html', 'css', 'javascript', 'vuejs'],
+          name: 'Music Player',
+          skills: 'vuejs',
           link: 'https://elastic-euler-fa1143.netlify.app',
           github: 'https://github.com/alexandre-soares/vuejs-music-app',
           description: `
@@ -82,8 +85,8 @@ export default {
         },
         {
           id: 5,
-          name: 'VueJS Speed Writing App',
-          skills: ['html', 'css', 'javascript', 'vuejs'],
+          name: 'Speed Writing App',
+          skills: 'vuejs',
           link: 'https://jovial-roentgen-b0d6a0.netlify.app',
           github: 'https://github.com/alexandre-soares/speed-writing-vuejs',
           description: `
@@ -97,8 +100,8 @@ export default {
         },
         {
           id: 6,
-          name: 'Weather App - VueJS',
-          skills: ['html', 'sass', 'javascript', 'vuejs'],
+          name: 'Weather App',
+          skills: 'vuejs',
           description: `
           <p>An app where you can see the weather in a city.</p>
           `,
@@ -156,9 +159,13 @@ export default {
     }
   }
 
-
   &__title {
     font-size: 1.8rem;
+  }
+
+  &__label {
+    border: 1px solid lightgray;
+    color: black;
   }
 
   &__description {
@@ -193,7 +200,7 @@ button a {
   display: block;
   position: relative;
   z-index: 10;
-  transition: color .7s ease-in;
+  transition: color 0.7s ease-in;
 }
 
 button:after,

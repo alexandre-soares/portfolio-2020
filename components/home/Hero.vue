@@ -1,5 +1,5 @@
 <template>
-  <section class="hero">
+  <div class="hero">
     <div class="hero__overlay"></div>
     <div class="container">
       <div class="hero__titles">
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
