@@ -157,5 +157,9 @@ img {
   right: 0;
   color: rgba(78, 78, 78, 0.2);
   font-size: 10rem;
+
+  @media only screen and (max-width: $bp-small) {
+    display: none;
+  }
 }
 </style>

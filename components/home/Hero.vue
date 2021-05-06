@@ -1,5 +1,6 @@
 <template>
   <div class="hero">
+    <div class="hero__bg-white"></div>
     <div class="hero__overlay"></div>
     <div class="container">
       <div class="hero__titles">
@@ -35,14 +36,18 @@ export default {}
   align-items: center;
   justify-content: flex-start;
 
-  background: url('../../static/img/background/alex.jpg'); /* Chrome 10-25, Safari 5.1-6 */
-  background: url('../../static/img/background/alex.jpg'); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: url('../../static/img/background/alex.png'); /* Chrome 10-25, Safari 5.1-6 */
   background-position: center right;
   background-repeat: no-repeat;
   background-size: contain;
 
   position: relative;
+
+  @media only screen and (max-width: $bp-small) {
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+  }
 
   & .container {
     z-index: 1;
@@ -74,12 +79,21 @@ export default {}
     }
   }
 
+  & h2 {
+    margin: 4rem 0;
+  }
+
   &__contact {
     text-align: center;
     width: 40%;
     display: grid;
     grid-gap: 3rem;
     grid-template-columns: 1fr 1fr 1fr;
+
+    @media only screen and (max-width: $bp-small) {
+      margin: 0 auto;
+      width: 70%;
+    }
 
     & a {
       display: flex;

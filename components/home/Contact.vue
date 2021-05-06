@@ -16,7 +16,7 @@
       <div v-if="successCopy" class="contact__message contact__success">
         You copied the email address!
       </div>
-       <div v-if="successCopy === false" class="contact__message contact__error">
+      <div v-if="successCopy === false" class="contact__message contact__error">
         Oops! Something's wrong!
       </div>
       <div class="contact__links">
@@ -124,6 +124,8 @@ export default {
 
     & img {
       margin-left: 1rem;
+      width: 2rem;
+      height: 2rem;
       cursor: pointer;
     }
 
@@ -159,6 +161,10 @@ export default {
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 50%;
+    }
   }
 
   &__card {

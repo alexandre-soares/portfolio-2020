@@ -122,11 +122,11 @@ export default {
   &__wrapper {
     padding: 5rem 3rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10rem;
 
     @media only screen and (max-width: $bp-small) {
-      height: auto;
+      grid-template-columns: 1fr;
       padding: 0 1.5rem;
     }
   }
@@ -136,8 +136,12 @@ export default {
   text-align: center;
   margin: 2rem 0;
 
+  @media only screen and (max-width: $bp-small) {
+    margin: 1rem 0;
+  }
+
   &__img {
-    height: 17rem;
+    height: 24rem;
     width: auto;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -151,7 +155,7 @@ export default {
     transition: all 0.3s ease-in;
 
     @media only screen and (max-width: $bp-small) {
-      height: 25rem;
+      height: 17rem;
     }
 
     &:hover {
@@ -164,6 +168,7 @@ export default {
   }
 
   &__label {
+    background-color: transparent;
     border: 1px solid lightgray;
     color: black;
   }
@@ -244,41 +249,4 @@ button:hover:before {
   transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
 </style>
