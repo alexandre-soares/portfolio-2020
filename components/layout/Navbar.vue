@@ -36,7 +36,6 @@
             <img src="@/static/img/icon/github-white.svg" alt="github" />
           </a>
         </ul>
-
       </div>
     </div>
   </div>
@@ -66,13 +65,12 @@ export default {
   z-index: 999;
   transition: all 0.3s ease-in-out;
 
-    @media only screen and (max-width: $bp-small) {
-      padding: 2rem 3rem;
-    }
+  @media only screen and (max-width: $bp-small) {
+    padding: 2rem 3rem;
+  }
 
   &__list {
     display: flex;
-
   }
 
   &__item {
@@ -102,20 +100,16 @@ export default {
     width: 5rem;
     height: 5rem;
     margin-right: auto;
-
   }
-
-
   &__icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
-
   }
 }
 
 .navbar.navbar--hidden {
-   & .navbar__logo {
+  & .navbar__logo {
     height: 4rem;
     width: 4rem;
     transition: all 0.3s ease-in-out;

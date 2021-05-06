@@ -1,48 +1,16 @@
 <template>
   <div>
-    <Navbar />
     <Nuxt />
-    <div v-if="customizeCursor" class="cursor"></div>
   </div>
 </template>
 
 <script>
-import Navbar from '@/components/layout/Navbar.vue'
-export default {
-  components: {
-    Navbar,
-  },
-  data() {
-    return {
-      customizeCursor: false,
-    }
-  },
-  mounted() {
-    if (this.customizeCursor) {
-      const cursor = document.querySelector('.cursor')
-      document.addEventListener('mousemove', (e) => {
-        cursor.setAttribute(
-          'style',
-          'top: ' + (e.pageY - 20) + 'px; left: ' + (e.pageX - 20) + 'px'
-        )
-      })
-
-      document.addEventListener('click', () => {
-        cursor.classList.add('cursor--expand')
-
-        setTimeout(() => {
-          cursor.classList.remove('cursor--expand')
-        }, 500)
-      })
-    }
-  },
-}
+export default {}
 </script>
 
 <style lang="scss">
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -101,9 +69,6 @@ h2 {
   margin: 2rem 0 2.5rem;
 }
 
-h3 {
-}
-
 a {
   color: $secondary-color;
   text-decoration: none;
@@ -117,6 +82,7 @@ p {
 
 img {
   width: 100%;
+  height: 100%;
 }
 
 // btn
@@ -138,73 +104,6 @@ img {
 .icon {
   width: 4rem;
   height: 4rem;
-}
-
-// cursor
-
-.cursor {
-  width: 40px;
-  height: 40px;
-  border: 2px solid white;
-  border-radius: 50%;
-  position: absolute;
-
-  transition-duration: 200ms;
-  transition-timing-function: ease-out;
-  animation: cursorAnimation 0.7s infinite alternate;
-
-  &::after {
-    content: '';
-    width: 60px;
-    height: 60px;
-    border: 8px solid grey;
-    border-radius: 50%;
-    position: absolute;
-    opacity: 0.5;
-    top: -12px;
-    left: -12px;
-    animation: cursorAnimation2 0.6s infinite alternate;
-  }
-
-  &--expand {
-    animation: cursorAnimation3 0.5s forwards;
-    border: 1px solid red;
-  }
-}
-
-@keyframes cursorAnimation {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(0.7);
-  }
-}
-
-@keyframes cursorAnimation2 {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(0.4);
-  }
-}
-
-@keyframes cursorAnimation3 {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(3);
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 0;
-  }
 }
 
 /* Enter and leave animations can use different */
@@ -248,5 +147,19 @@ img {
   display: inline-block;
   border: 1px solid white;
   margin-right: 30px;
+}
+
+// Background Title
+
+.background-title {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: rgba(78, 78, 78, 0.2);
+  font-size: 10rem;
+
+  @media only screen and (max-width: $bp-small) {
+    display: none;
+  }
 }
 </style>
