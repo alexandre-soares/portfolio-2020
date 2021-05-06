@@ -76,7 +76,7 @@ export default {
           link: 'https://elastic-euler-fa1143.netlify.app',
           github: 'https://github.com/alexandre-soares/vuejs-music-app',
           description: `
-          <p>A music player made with VueJS. Manipulation of audio files</p>
+          <p>A music player made with VueJS. Manipulation of audio files. (Desktop Only)</p>
           `,
           featureImage: require('@/static/img/portfolio/music-player-feature.png'),
           carouselImages: [
@@ -90,7 +90,7 @@ export default {
           link: 'https://jovial-roentgen-b0d6a0.netlify.app',
           github: 'https://github.com/alexandre-soares/speed-writing-vuejs',
           description: `
-          <p>An app where you can test your speed writing on your keyboard.</p>
+          <p>An app where you can test your speed writing on your keyboard. (Desktop Only)</p>
           `,
           featureImage: require('@/static/img/portfolio/speed-writing-feature.png'),
           carouselImages: [
