@@ -7,7 +7,7 @@
           ><span class="text">Organised.</span>
         </h1>
         <p>
-          With solid work ethic I'm determined to produce quality products under
+          With solid work ethic, I'm determined to produce quality products under
           deadline pressure. I smoothly manages projects from concept to
           completion and i'm adept at problem solving at ease working with team
           or independently.
@@ -42,11 +42,9 @@ export default {
           triggerHook: 0,
           duration: 1000,
         })
-        .addIndicators()
         .setPin('.about')
         .setTween('.text', 1, { y: '0', stagger: 1 })
 
-      console.log(window.innerWidth)
 
       this.$scrollmagic.addScene(scene)
     }
@@ -96,6 +94,7 @@ export default {
     @media only screen and (max-width: $bp-small) {
       width: 90%;
       margin: 5rem auto;
+      text-align: center;
     }
   }
 
