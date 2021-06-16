@@ -9,7 +9,12 @@
               :style="'background-image: url(' + project.featureImage + ')'"
             ></div>
             <div class="project__title">{{ project.name }}</div>
-            <span class="label project__label">{{ project.skills }}</span>
+            <span
+              class="label project__label"
+              v-for="(skill, index) in project.skills"
+              :key="index"
+              >{{ skill }}</span
+            >
             <div
               class="project__description"
               v-html="project.description"
@@ -39,7 +44,7 @@ export default {
         {
           id: 1,
           name: "Laura SIBILLE's Portfolio",
-          skills: 'nuxtjs',
+          skills: ['nuxtjs', 'sass'],
           link: 'https://www.laurasibille.com/',
           github: false,
           description: `
@@ -55,7 +60,7 @@ export default {
         {
           id: 3,
           name: 'Netflix Movie Api',
-          skills: 'vuejs',
+          skills: ['vuejs', 'axios'],
           link: 'https://quirky-hugle-b33382.netlify.app',
           github:
             'https://github.com/alexandre-soares/netflix-movie-app-nuxtjs',
@@ -72,7 +77,7 @@ export default {
         {
           id: 5,
           name: `Requiem's Blog`,
-          skills: 'vuejs',
+          skills: ['vuejs', 'firebase'],
           link: 'https://joker-s-blog.web.app/',
           github: 'https://github.com/alexandre-soares/joker-blog',
           description: `
@@ -83,7 +88,7 @@ export default {
         {
           id: 4,
           name: 'Music Player',
-          skills: 'vuejs',
+          skills: ['vuejs'],
           link: 'https://elastic-euler-fa1143.netlify.app',
           github: 'https://github.com/alexandre-soares/vuejs-music-app',
           description: `
@@ -97,7 +102,7 @@ export default {
         {
           id: 6,
           name: 'Weather App',
-          skills: 'vuejs',
+          skills: ['vuejs'],
           description: `
           <p>An app where you can see the weather in a city.</p>
           `,
@@ -167,6 +172,7 @@ export default {
     background-color: transparent;
     border: 1px solid lightgray;
     color: black;
+    margin-top: 2rem;
   }
 
   &__description {
@@ -178,6 +184,4 @@ export default {
     margin-top: 4rem;
   }
 }
-
-
 </style>
