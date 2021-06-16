@@ -18,7 +18,7 @@
               <button type="button">
                 <a target="_blank" :href="project.link">Website</a>
               </button>
-              <button type="button">
+              <button type="button" v-if="project.github">
                 <a target="_blank" :href="project.github">Github</a>
               </button>
             </div>
@@ -70,6 +70,17 @@ export default {
           ],
         },
         {
+          id: 5,
+          name: `Requiem's Blog`,
+          skills: 'vuejs',
+          link: 'https://joker-s-blog.web.app/',
+          github: 'https://github.com/alexandre-soares/joker-blog',
+          description: `
+          <p>A blog where you can find some interesting articles about video games.</p>
+          `,
+          featureImage: require('@/static/img/portfolio/requiem-blog-featured-image.png'),
+        },
+        {
           id: 4,
           name: 'Music Player',
           skills: 'vuejs',
@@ -81,21 +92,6 @@ export default {
           featureImage: require('@/static/img/portfolio/music-player-feature.png'),
           carouselImages: [
             require('@/static/img/portfolio/music-player-feature.png'),
-          ],
-        },
-        {
-          id: 5,
-          name: 'Speed Writing App',
-          skills: 'vuejs',
-          link: 'https://jovial-roentgen-b0d6a0.netlify.app',
-          github: 'https://github.com/alexandre-soares/speed-writing-vuejs',
-          description: `
-          <p>An app where you can test your speed writing on your keyboard. (Desktop Only)</p>
-          `,
-          featureImage: require('@/static/img/portfolio/speed-writing-feature.png'),
-          carouselImages: [
-            require('@/static/img/portfolio/carousel/speed-writing/img1.png'),
-            require('@/static/img/portfolio/carousel/speed-writing/img2.png'),
           ],
         },
         {
@@ -183,70 +179,5 @@ export default {
   }
 }
 
-button {
-  margin: 0 2rem;
-  font-size: 1.6rem;
-  font-family: 'Hind Guntur', sans-serif;
-  line-height: 1;
-  letter-spacing: 0.025em;
-  padding: 1.1rem;
-  cursor: pointer;
-  color: white;
-  border: 0;
-  border-bottom: 1px solid $light-red;
-  border-radius: 2px;
-  min-width: 12rem;
-  overflow: hidden;
-  position: relative;
-  background-color: transparent;
-}
-
-button a {
-  display: block;
-  position: relative;
-  z-index: 10;
-  transition: color 0.7s ease-in;
-}
-
-button:after,
-button:before {
-  padding: 1.1rem 0;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: calc(-100% - 30px);
-  height: 100%;
-  width: calc(100% + 20px);
-  color: #fff;
-  border-radius: 2px;
-  transform: skew(-25deg);
-}
-
-button:after {
-  background: #fff;
-  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
-  z-index: 0;
-  opacity: 0.8;
-}
-
-button:before {
-  background: $light-red;
-  z-index: 5;
-  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-button:hover a {
-  color: white !important;
-}
-
-button:hover:after {
-  left: calc(0% - 10px);
-  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-button:hover:before {
-  left: calc(0% - 10px);
-  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
-}
 
 </style>

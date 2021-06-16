@@ -19,11 +19,11 @@ export default {
   name: 'Intro',
   mounted() {
     const tl = gsap.timeline({ defaults: { ease: 'power1.out' } })
-    tl.to('.text', { y: '0%', duration: 1.4, })
+    tl.to('.text', { y: '0%', duration: 1.4 })
     tl.to('.slider', { x: '100%', duration: 1.1, stagger: 0.25, delay: 1.2 })
-    tl.to('.text', { y: '100%', duration: 1.4, }, '-=1')
+    tl.to('.text', { y: '100%', duration: 1.4 }, '-=1')
     tl.to('.intro', { opacity: 0, duration: 1 }, '-=1')
-    tl.to('.intro', { y: '100%', duration: .1 })
+    tl.to('.intro', { y: '100%', duration: 0.1 })
   },
 }
 </script>

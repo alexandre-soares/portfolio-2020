@@ -162,4 +162,72 @@ img {
     display: none;
   }
 }
+
+// Buttons
+
+button {
+  margin: 0 2rem;
+  font-size: 1.6rem;
+  font-family: 'Hind Guntur', sans-serif;
+  line-height: 1;
+  letter-spacing: 0.025em;
+  padding: 1.1rem;
+  cursor: pointer;
+  color: white;
+  border: 0;
+  border-bottom: 1px solid $light-red;
+  border-radius: 2px;
+  min-width: 12rem;
+  overflow: hidden;
+  position: relative;
+  background-color: transparent;
+}
+
+button a {
+  display: block;
+  position: relative;
+  z-index: 10;
+  transition: color 0.7s ease-in;
+}
+
+button:after,
+button:before {
+  padding: 1.1rem 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(-100% - 30px);
+  height: 100%;
+  width: calc(100% + 20px);
+  color: #fff;
+  border-radius: 2px;
+  transform: skew(-25deg);
+}
+
+button:after {
+  background: #fff;
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+button:before {
+  background: $light-red;
+  z-index: 5;
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+button:hover a {
+  color: white !important;
+}
+
+button:hover:after {
+  left: calc(0% - 10px);
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+button:hover:before {
+  left: calc(0% - 10px);
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
 </style>

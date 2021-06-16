@@ -49,14 +49,14 @@ export default {
   },
   methods: {
     copyTestingCode() {
-      let testingCodeToCopy = document.querySelector('#testing-code')
+      const testingCodeToCopy = document.querySelector('#testing-code')
       testingCodeToCopy.setAttribute('type', 'text') // 不是 hidden 才能複製
       testingCodeToCopy.select()
 
       try {
-        var successful = document.execCommand('copy')
-        var msg = successful ? 'successful' : 'unsuccessful'
+        const successful = document.execCommand('copy')
         this.successCopy = true
+        return successful
       } catch (err) {
         this.successCopy = false
       }

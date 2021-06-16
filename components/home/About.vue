@@ -7,8 +7,8 @@
           ><span class="text">Organised.</span>
         </h1>
         <p>
-          With solid work ethic, I'm determined to produce quality products under
-          deadline pressure. I smoothly manages projects from concept to
+          With solid work ethic, I'm determined to produce quality products
+          under deadline pressure. I smoothly manages projects from concept to
           completion and i'm adept at problem solving at ease working with team
           or independently.
         </p>
@@ -23,20 +23,23 @@
           <span class="label"><span>N</span>ucleo</span>
           <span class="label"><span>P</span>ostman</span>
         </div>
+        <div class="about__download">
+          <button>
+            <a target="_blank" href="/Alexandre Soares - Front Dev Resume.pdf">Download My Resume</a>
+          </button>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import gsap from 'gsap'
+// import gsap from 'gsap'
 export default {
   name: 'About',
   mounted() {
-    var tl = gsap.timeline({ defaults: { ease: 'power1.out' } })
-
     if (window.innerWidth > 600) {
-      var scene = this.$scrollmagic
+      const scene = this.$scrollmagic
         .scene({
           triggerElement: '.about',
           triggerHook: 0,
@@ -44,7 +47,6 @@ export default {
         })
         .setPin('.about')
         .setTween('.text', 1, { y: '0', stagger: 1 })
-
 
       this.$scrollmagic.addScene(scene)
     }
@@ -100,6 +102,10 @@ export default {
 
   &__labels {
     text-align: center;
+  }
+
+  &__download {
+    margin-top: 3rem;
   }
 }
 
