@@ -51,11 +51,6 @@ export default {
           <p>This is the website I created for the UX-UI Designer Laura SIBILLE.</p>
           `,
           featureImage: require('@/static/img/portfolio/laura-sibille-feature.png'),
-          carouselImages: [
-            require('@/static/img/portfolio/carousel/laura-sibille/img1.png'),
-            require('@/static/img/portfolio/carousel/laura-sibille/img2.png'),
-            require('@/static/img/portfolio/carousel/laura-sibille/img3.png'),
-          ],
         },
         {
           id: 3,
@@ -68,16 +63,11 @@ export default {
           <p>A Netflix visual connected with a movie api to display a list of movies.</p>
           `,
           featureImage: require('@/static/img/portfolio/netflix-feature.png'),
-          carouselImages: [
-            require('@/static/img/portfolio/carousel/netflix-page/img1.png'),
-            require('@/static/img/portfolio/carousel/netflix-page/img2.png'),
-            require('@/static/img/portfolio/carousel/netflix-page/img3.png'),
-          ],
         },
         {
           id: 5,
           name: `Requiem's Blog`,
-          skills: ['vuejs', 'firebase'],
+          skills: ['vuejs', 'firebase', 'crud'],
           link: 'https://joker-s-blog.web.app/',
           github: 'https://github.com/alexandre-soares/joker-blog',
           description: `
@@ -102,13 +92,24 @@ export default {
         {
           id: 6,
           name: 'Weather App',
-          skills: ['vuejs'],
+          skills: ['vuejs', 'firebase'],
           description: `
-          <p>An app where you can see the weather in a city.</p>
+          <p>An app where you can check the weather.</p>
           `,
-          link: 'https://flamboyant-mclean-722c14.netlify.app/',
-          github: 'https://github.com/alexandre-soares/weatherapp-vuejs',
+          link: 'https://vuejs-weather-app-7dab4.web.app/',
+          github: 'https://github.com/alexandre-soares/vuejs-weather-app',
           featureImage: require('@/static/img/portfolio/weather-app-feature.png'),
+        },
+        {
+          id: 7,
+          name: 'Invoice App',
+          skills: ['vuejs', 'firebase', 'crud'],
+          description: `
+          <p>An Invoice app with realtime update.</p>
+          `,
+          link: 'https://vuejs-invoice-app.web.app/',
+          github: 'https://github.com/alexandre-soares/vuejs-invoice-app',
+          featureImage: require('@/static/img/portfolio/invoice-app-feature.png'),
         },
       ],
     }

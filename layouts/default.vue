@@ -154,7 +154,7 @@ img {
 .background-title {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 2rem;
   color: rgba(78, 78, 78, 0.2);
   font-size: 10rem;
 

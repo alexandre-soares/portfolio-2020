@@ -8,9 +8,8 @@
         </h1>
         <p>
           With solid work ethic, I'm determined to produce quality products
-          under deadline pressure. I smoothly manages projects from concept to
-          completion and i'm adept at problem solving at ease working with team
-          or independently.
+          under deadline pressure. I smoothly manage projects from concept to
+          completion.
         </p>
         <div class="about__labels">
           <span class="label"><span>S</span>ass</span>
@@ -25,7 +24,9 @@
         </div>
         <div class="about__download">
           <button>
-            <a target="_blank" href="/Alexandre Soares - Front Dev Resume.pdf">Download My Resume</a>
+            <a target="_blank" href="/Alexandre Soares - Front Dev Resume.pdf"
+              >Download My Resume</a
+            >
           </button>
         </div>
       </div>

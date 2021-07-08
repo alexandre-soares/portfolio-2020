@@ -3,22 +3,36 @@
     <div class="contact__overlay"></div>
     <div class="container">
       <h3>Feel free to contact me!</h3>
-      <div class="contact__mail">
-        <h3>contact@alexandresoares.fr</h3>
-        <img
-          class="icon"
-          src="@/static/img/icon/copy.svg"
-          alt="copy"
-          @click.stop.prevent="copyTestingCode"
-        />
-        <input type="hidden" id="testing-code" :value="testingCode" />
+      <div class="contact__form__wrapper">
+        <form class="contact__form" @submit.prevent="sendEmail">
+          <div class="field">
+            <label>Name</label>
+            <input type="text" name="user_name" />
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="user_email" />
+          </div>
+          <div class="field">
+            <label>Message</label>
+            <textarea rows="10" name="message"></textarea>
+          </div>
+          <input class="btn" type="submit" value="Send" />
+        </form>
+        <div
+          v-if="isEmailSent === true"
+          class="contact__message contact__success"
+        >
+          You successfully sent the email!
+        </div>
+        <div
+          v-if="isEmailSent === false"
+          class="contact__message contact__success"
+        >
+          You successfully sent the email!
+        </div>
       </div>
-      <div v-if="successCopy" class="contact__message contact__success">
-        You copied the email address!
-      </div>
-      <div v-if="successCopy === false" class="contact__message contact__error">
-        Oops! Something's wrong!
-      </div>
+
       <div class="contact__links">
         <div class="contact__card">
           <a href="https://www.linkedin.com/in/alex-ds-soares/" target="_blank">
@@ -39,31 +53,33 @@
 </template>
 
 <script>
+import emailjs from 'emailjs-com'
 export default {
   name: 'Contact',
   data() {
     return {
-      testingCode: 'contact@alexandresoares.fr',
-      successCopy: null,
+      isEmailSent: null,
     }
   },
   methods: {
-    copyTestingCode() {
-      let testingCodeToCopy = document.querySelector('#testing-code')
-      testingCodeToCopy.setAttribute('type', 'text') // 不是 hidden 才能複製
-      testingCodeToCopy.select()
-
-      try {
-        var successful = document.execCommand('copy')
-        var msg = successful ? 'successful' : 'unsuccessful'
-        this.successCopy = true
-      } catch (err) {
-        this.successCopy = false
-      }
-
-      /* unselect the range */
-      testingCodeToCopy.setAttribute('type', 'hidden')
-      window.getSelection().removeAllRanges()
+    sendEmail(e) {
+      emailjs
+        .sendForm(
+          'service_wjep9cc',
+          'template_mnlhg61',
+          e.target,
+          'user_Zi0oEySIEQtJvHwy02QhL'
+        )
+        .then(
+          (result) => {
+            console.log('SUCCESS!', result.status, result.text)
+            this.isEmailSent = true
+          },
+          (error) => {
+            this.isEmailSent = false
+            console.log('FAILED...', error)
+          }
+        )
     },
   },
 }
@@ -106,7 +122,7 @@ export default {
   }
 
   & h3 {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     font-style: italic;
     font-weight: 300;
     letter-spacing: 2px;
@@ -115,22 +131,43 @@ export default {
     color: white;
   }
 
-  &__mail {
-    text-align: center;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  &__form {
+    margin: 2rem auto;
+    display: block;
+    width: 100%;
 
-    & img {
-      margin-left: 1rem;
-      width: 2rem;
-      height: 2rem;
-      cursor: pointer;
+    &__wrapper {
+      width: 60rem;
+      margin: 0 auto;
     }
 
-    & h3 {
-      margin-right: 1rem;
+    & .field {
+      margin: 2rem auto;
+    }
+
+    & label {
+      display: block;
+      margin: 1rem 0;
+      font-size: 1.6rem;
+      color: #fff;
+    }
+
+    & input,
+    textarea {
+      width: 100%;
+      padding: 1rem 2rem;
+      font-size: 1.6rem;
+      border-radius: 0.5rem;
+      border: none;
+      font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    & .btn {
+      padding: 1.5rem;
+      margin: 1rem auto;
+      background: #000046;
+      text-align: center;
+      display: inline-block;
     }
   }
 
@@ -139,7 +176,6 @@ export default {
     padding: 1rem 2rem;
     border-radius: 0.5rem;
     display: block;
-    width: 30rem;
     text-align: center;
     margin: 2rem auto;
   }
