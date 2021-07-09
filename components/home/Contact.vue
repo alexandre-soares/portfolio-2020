@@ -53,6 +53,7 @@
 </template>
 
 <script>
+import gsap from 'gsap'
 import emailjs from 'emailjs-com'
 export default {
   name: 'Contact',
@@ -72,12 +73,12 @@ export default {
         )
         .then(
           (result) => {
-            console.log('SUCCESS!', result.status, result.text)
+            console.log(result)
             this.isEmailSent = true
           },
           (error) => {
+            console.log(error)
             this.isEmailSent = false
-            console.log('FAILED...', error)
           }
         )
     },
