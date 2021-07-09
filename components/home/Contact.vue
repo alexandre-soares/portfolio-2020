@@ -17,7 +17,7 @@
             <label>Message</label>
             <textarea rows="10" name="message"></textarea>
           </div>
-          <input class="btn" type="submit" value="Send" />
+          <button class="btn" type="submit" value="Send">Send</button>
         </form>
         <div
           v-if="isEmailSent === true"
@@ -138,7 +138,7 @@ export default {
     width: 100%;
 
     &__wrapper {
-      width: 60rem;
+      width: 100%;
       margin: 0 auto;
     }
 
@@ -165,10 +165,21 @@ export default {
 
     & .btn {
       padding: 1.5rem;
-      margin: 1rem auto;
+      margin: 2rem auto;
+      width: 20%;
       background: #000046;
       text-align: center;
-      display: inline-block;
+      display: block;
+      transition: 500ms all ease-in;
+
+      &:hover {
+        background: #09096b;
+      }
+
+      &:after,
+      &:before {
+        content: none;
+      }
     }
   }
 
