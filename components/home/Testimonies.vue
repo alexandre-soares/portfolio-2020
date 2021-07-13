@@ -2,11 +2,7 @@
   <div class="testimonies">
     <div class="container">
       <div class="testimony">
-        <nuxt-img
-          src="/img/testimonies/Doris.jpg"
-          alt="Doris"
-          sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
-        />
+        <img src="/img/testimonies/Doris.jpg" alt="Doris" />
         <blockquote class="groucho">
           I had the pleasure of working with Alex on two different projects over
           two years. Reactive and devoted to his work, Alex always navigated
@@ -18,11 +14,7 @@
         </blockquote>
       </div>
       <div class="testimony">
-        <nuxt-img
-          src="/img/testimonies/Laura.jpg"
-          alt="Laura"
-          sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
-        />
+        <img src="/img/testimonies/Laura.jpg" alt="Laura" />
         <blockquote class="groucho">
           Alexandre is a great professional, very structured and organised. He
           was always doing his best to meet my requirements.
