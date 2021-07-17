@@ -1,5 +1,6 @@
 <template>
   <div class="testimonies">
+    <h2 class="mobile-title">Testimonies</h2>
     <div class="container">
       <div class="testimony">
         <img src="/img/testimonies/Doris.jpg" alt="Doris" />
@@ -39,9 +40,13 @@ $base-line-height: 1.5em;
 .testimonies {
   height: 100vh;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  & .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .testimony {
@@ -65,7 +70,7 @@ $base-line-height: 1.5em;
     margin-right: 2rem;
 
     @media only screen and (max-width: $bp-medium) {
-      width: 40%;
+      width: 30%;
     }
   }
 

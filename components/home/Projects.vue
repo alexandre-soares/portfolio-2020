@@ -1,5 +1,6 @@
 <template>
   <section class="projects">
+    <h2 class="mobile-title">Projects</h2>
     <div class="container">
       <div class="projects__wrapper">
         <div v-for="project in projects" :key="project.id" class="project" Î>
@@ -125,7 +126,7 @@ export default {
     padding: 5rem 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10rem;
+    grid-gap: 3rem;
 
     @media only screen and (max-width: $bp-small) {
       grid-template-columns: 1fr;

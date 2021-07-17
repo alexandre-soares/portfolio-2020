@@ -163,6 +163,32 @@ img {
   }
 }
 
+// Mobile title
+
+.mobile-title {
+  padding: 4rem 0;
+  background: -webkit-linear-gradient(
+    to right,
+    #000046,
+    #1cb5e0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #000046,
+    #1cb5e0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  margin: 3rem 0;
+  text-align: center;
+  display: none;
+  font-size: 4rem;
+  font-weight: bold;
+
+  @media only screen and (max-width: $bp-small) {
+    display: block;
+  }
+}
+
 // Buttons
 
 button {

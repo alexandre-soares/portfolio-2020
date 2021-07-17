@@ -11,16 +11,81 @@
           under deadline pressure. I smoothly manage projects from concept to
           completion.
         </p>
-        <div class="about__labels">
-          <span class="label"><span>S</span>ass</span>
-          <span class="label"><span>J</span>avascript</span>
-          <span class="label"><span>V</span>ueJS</span>
-          <span class="label"><span>N</span>uxtJS</span>
-          <br />
-          <span class="label"><span>V</span>S Code</span>
-          <span class="label"><span>G</span>ithub</span>
-          <span class="label"><span>N</span>ucleo</span>
-          <span class="label"><span>P</span>ostman</span>
+        <div class="about__icons">
+          <div>
+            <a
+              href="https://en.wikipedia.org/wiki/JavaScript"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/img/icon/js.svg" alt="icon" />
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://vuejs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/img/icon/vuejs.svg" alt="icon" />
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://fr.nuxtjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/img/icon/nuxtjs.svg" alt="icon" />
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://sass-lang.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/img/icon/sass.svg" alt="icon" />
+            </a>
+          </div>
+        </div>
+        <div class="about__icons">
+          <div>
+            <a
+              href="https://code.visualstudio.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/img/icon/vscode.svg" alt="icon" />
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/img/icon/github.svg" alt="icon" />
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://nucleoapp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/img/icon/nucleo.png" alt="icon" />
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://www.postman.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/img/icon/postman.svg" alt="icon" />
+            </a>
+          </div>
         </div>
         <div class="about__download">
           <button>
@@ -97,12 +162,30 @@ export default {
     @media only screen and (max-width: $bp-small) {
       width: 90%;
       margin: 5rem auto;
-      text-align: center;
+      text-align: justify;
     }
   }
 
-  &__labels {
-    text-align: center;
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: 3rem 0;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 80%;
+    }
+
+    & div {
+      height: 6rem;
+      width: 6rem;
+
+      @media only screen and (max-width: $bp-small) {
+        height: 4rem;
+        width: 4rem;
+      }
+    }
   }
 
   &__download {
