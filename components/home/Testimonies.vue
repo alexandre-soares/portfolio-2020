@@ -41,6 +41,10 @@ $base-line-height: 1.5em;
   height: 100vh;
   position: relative;
 
+  @media only screen and (max-width: $bp-small) {
+    height: auto;
+  }
+
   & .container {
     display: flex;
     flex-direction: column;

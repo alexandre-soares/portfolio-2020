@@ -37,7 +37,7 @@ export default {}
   justify-content: flex-start;
 
   background: url('../../static/img/background/alex.png'); /* Chrome 10-25, Safari 5.1-6 */
-  background-position: center right;
+  background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
 
@@ -60,12 +60,12 @@ export default {}
     width: 100%;
     background: #000046; /* fallback for old browsers */
     background: -webkit-linear-gradient(
-      to right,
+      45deg,
       #000046,
       #1cb5e0
     ); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(
-      to right,
+      45deg,
       #000046,
       #1cb5e0
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
