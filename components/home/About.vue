@@ -260,6 +260,10 @@ export default {
       flex: 1;
       margin-left: 7rem;
       z-index: 800;
+
+      @media only screen and (max-width: $bp-large) {
+        margin-left: 0;
+      }
     }
   }
 }
