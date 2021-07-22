@@ -74,6 +74,9 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxt/image',
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-128199176-1'
+    }]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
