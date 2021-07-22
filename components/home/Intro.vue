@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="slider"></div>
-    <div class="slider slider--orange"></div>
+    <div class="slider slider--black"></div>
     <div class="slider slider--blue"></div>
   </section>
 </template>
@@ -52,7 +52,7 @@ export default {
   z-index: 998;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 
-  &--orange {
+  &--black {
     z-index: 997;
     background: #000046;
   }

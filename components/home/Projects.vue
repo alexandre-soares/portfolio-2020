@@ -5,10 +5,9 @@
       <div class="projects__wrapper">
         <div v-for="project in projects" :key="project.id" class="project" Î>
           <div class="project__card">
-            <div
-              class="project__img"
-              :style="'background-image: url(' + project.featureImage + ')'"
-            ></div>
+            <a target="_blank" :href="project.link">
+              <img :src="project.featureImage" alt="img" class="project__img" />
+            </a>
             <div class="project__title">{{ project.name }}</div>
             <span
               class="label project__label"
@@ -54,6 +53,17 @@ export default {
           featureImage: require('@/static/img/portfolio/laura-sibille-feature.png'),
         },
         {
+          id: 7,
+          name: 'Invoice App',
+          skills: ['vuejs', 'vuex', 'firebase'],
+          description: `
+          <p>An Invoice app with realtime update.</p>
+          `,
+          link: 'https://vuejs-invoice-app.web.app/',
+          github: 'https://github.com/alexandre-soares/vuejs-invoice-app',
+          featureImage: require('@/static/img/portfolio/invoice-app-feature.png'),
+        },
+        {
           id: 3,
           name: 'Netflix Movie Api',
           skills: ['vuejs', 'axios'],
@@ -93,24 +103,13 @@ export default {
         {
           id: 6,
           name: 'Weather App',
-          skills: ['vuejs', 'firebase'],
+          skills: ['vuejs', 'firebase', 'crud'],
           description: `
           <p>An app where you can check the weather.</p>
           `,
           link: 'https://vuejs-weather-app-7dab4.web.app/',
           github: 'https://github.com/alexandre-soares/vuejs-weather-app',
           featureImage: require('@/static/img/portfolio/weather-app-feature.png'),
-        },
-        {
-          id: 7,
-          name: 'Invoice App',
-          skills: ['vuejs', 'firebase', 'crud'],
-          description: `
-          <p>An Invoice app with realtime update.</p>
-          `,
-          link: 'https://vuejs-invoice-app.web.app/',
-          github: 'https://github.com/alexandre-soares/vuejs-invoice-app',
-          featureImage: require('@/static/img/portfolio/invoice-app-feature.png'),
         },
       ],
     }
@@ -144,26 +143,14 @@ export default {
   }
 
   &__img {
-    height: 24rem;
-    width: auto;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: white;
+    height: 100%;
+    width: 100%;
     border-radius: 0.5rem;
     overflow: hidden;
     margin: 1rem auto 2rem;
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease-in;
-
-    @media only screen and (max-width: $bp-small) {
-      height: 17rem;
-    }
-
-    &:hover {
-      background-size: 102%;
-    }
   }
 
   &__title {
@@ -185,5 +172,73 @@ export default {
   &__link {
     margin-top: 4rem;
   }
+}
+
+// Buttons
+
+button {
+  margin: 0 2rem;
+  font-size: 1.6rem;
+  font-family: 'Hind Guntur', sans-serif;
+  line-height: 1;
+  letter-spacing: 0.025em;
+  padding: 1.1rem;
+  cursor: pointer;
+  color: white;
+  border: 0;
+  border-bottom: 1px solid $light-red;
+  border-radius: 2px;
+  min-width: 12rem;
+  overflow: hidden;
+  position: relative;
+  background-color: transparent;
+}
+
+button a {
+  display: block;
+  position: relative;
+  z-index: 10;
+  transition: color 0.7s ease-in;
+}
+
+button:after,
+button:before {
+  padding: 1.1rem 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(-100% - 30px);
+  height: 100%;
+  width: calc(100% + 20px);
+  color: #fff;
+  border-radius: 2px;
+  transform: skew(-25deg);
+}
+
+button:after {
+  background: #fff;
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+button:before {
+  background: $light-red;
+  z-index: 5;
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+button:hover a {
+  color: white !important;
+}
+
+button:hover:after {
+  left: calc(0% - 10px);
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+button:hover:before {
+  left: calc(0% - 10px);
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 </style>

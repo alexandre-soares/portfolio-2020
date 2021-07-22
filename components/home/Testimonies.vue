@@ -9,9 +9,15 @@
           two years. Reactive and devoted to his work, Alex always navigated
           multi-partner projects with a lot of professionalism and a dash of
           humour.
-          <footer>
-            Doris MONJAC - Head Of The Economy And Society Unit of EUROQUALITY
-          </footer>
+          <a
+            href="https://www.linkedin.com/in/doris-monjac-35843a104/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <footer>
+              Doris MONJAC - Head Of The Economy And Society Unit of EUROQUALITY
+            </footer>
+          </a>
         </blockquote>
       </div>
       <div class="testimony">
@@ -19,7 +25,13 @@
         <blockquote class="groucho">
           Alexandre is a great professional, very structured and organised. He
           was always doing his best to meet my requirements.
-          <footer>Laura SIBILLE - UX-UI Designer</footer>
+          <a
+            href="https://www.linkedin.com/in/laura-sibille/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <footer>Laura SIBILLE - UX-UI Designer</footer>
+          </a>
         </blockquote>
       </div>
     </div>
@@ -38,7 +50,6 @@ $base-font-size: 1.8rem;
 $base-line-height: 1.5em;
 
 .testimonies {
-  height: 100vh;
   position: relative;
 
   @media only screen and (max-width: $bp-small) {
@@ -116,6 +127,14 @@ $base-line-height: 1.5em;
     font-style: italic;
     color: darken($white, 15%);
     z-index: -1;
+  }
+}
+
+a footer {
+  transition: all .3s ease-in;
+
+  &:hover {
+    color: red;
   }
 }
 </style>

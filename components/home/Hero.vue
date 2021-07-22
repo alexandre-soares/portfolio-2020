@@ -1,11 +1,10 @@
 <template>
   <div class="hero">
-    <div class="hero__bg-white"></div>
     <div class="hero__overlay"></div>
     <div class="container">
       <div class="hero__titles">
         <h1>Alexandre SOARES</h1>
-        <h2>VueJS Web Developer</h2>
+        <h2>VueJS/NuxtJS Web Developer</h2>
         <div class="hero__contact">
           <a href="https://www.linkedin.com/in/alex-ds-soares/" target="_blank">
             <img src="@/static/img/icon/linkedin-white.svg" alt="linkedin" />

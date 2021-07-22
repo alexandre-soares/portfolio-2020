@@ -6,10 +6,29 @@
           <span class="text">Reliable.</span><span class="text">Versatile.</span
           ><span class="text">Organised.</span>
         </h1>
+        <div class="about__plus">
+          <p>
+            In my previous experience, I developed several
+            <strong>web-based applications</strong> for the European Commission.
+            Their main goal was to
+            <strong>introduce and highlight scientific innovations</strong> and
+            breakthrough technologies
+            <strong>enhancing daily life.</strong> Collaborating with
+            consortiums made of several partners, I managed to build
+            <strong>user-friendly</strong> and
+            <strong>secure websites</strong> within the project frames, managing
+            enhancement requests after each rollout.
+          </p>
+          <img
+            src="/img/background/responsive-mockup-scene (1)-min.png"
+            alt="img"
+          />
+        </div>
         <p>
-          With solid work ethic, I'm determined to produce quality products
-          under deadline pressure. I smoothly manage projects from concept to
-          completion.
+          With solid <strong>work ethic</strong> and
+          <strong>new technologies</strong>, I'm determined to produce quality
+          products under deadline pressure. I smoothly manage projects from
+          <strong>concept to completion.</strong>
         </p>
         <div class="about__icons">
           <div>
@@ -46,6 +65,15 @@
               rel="noopener noreferrer"
             >
               <img src="/img/icon/sass.svg" alt="icon" />
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://getbootstrap.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/img/icon/bootstrap.svg" alt="icon" />
             </a>
           </div>
         </div>
@@ -86,6 +114,24 @@
               <img src="/img/icon/postman.svg" alt="icon" />
             </a>
           </div>
+          <div>
+            <a
+              href="https://firebase.google.com/?hl=FR"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/img/icon/firebase.png" alt="icon" />
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://www.atlassian.com/software/jira"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/img/icon/jira.png" alt="icon" />
+            </a>
+          </div>
         </div>
         <div class="about__download">
           <button>
@@ -119,16 +165,18 @@ export default {
   },
 }
 </script>
+
 <style lang="scss" scoped>
 .about {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 5rem;
 
   @media only screen and (max-width: $bp-small) {
     height: auto;
+    padding-top: 2rem;
   }
 
   &__wrapper {
@@ -191,6 +239,29 @@ export default {
   &__download {
     margin-top: 3rem;
   }
+
+  &__plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @media only screen and (max-width: $bp-large) {
+      flex-direction: column;
+    }
+
+    & p {
+      flex: 0 0 60%;
+      z-index: 999;
+    }
+
+    & img {
+      width: 50%;
+      flex: 1;
+      margin-left: 7rem;
+      z-index: 800;
+    }
+  }
 }
 
 .text {
@@ -221,5 +292,80 @@ export default {
   @media only screen and (max-width: $bp-small) {
     display: block;
   }
+}
+
+strong {
+  transition: all 0.3s ease-in;
+  &:hover {
+    color: red;
+  }
+}
+
+// Buttons
+
+button {
+  margin: 0 2rem;
+  font-size: 1.6rem;
+  font-family: 'Hind Guntur', sans-serif;
+  line-height: 1;
+  letter-spacing: 0.025em;
+  padding: 1.1rem;
+  cursor: pointer;
+  color: white;
+  border: 0;
+  border-bottom: 1px solid $light-red;
+  border-radius: 2px;
+  min-width: 12rem;
+  overflow: hidden;
+  position: relative;
+  background-color: transparent;
+}
+
+button a {
+  display: block;
+  position: relative;
+  z-index: 10;
+  transition: color 0.7s ease-in;
+}
+
+button:after,
+button:before {
+  padding: 1.1rem 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(-100% - 30px);
+  height: 100%;
+  width: calc(100% + 20px);
+  color: #fff;
+  border-radius: 2px;
+  transform: skew(-25deg);
+}
+
+button:after {
+  background: #fff;
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+button:before {
+  background: $light-red;
+  z-index: 5;
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+button:hover a {
+  color: white !important;
+}
+
+button:hover:after {
+  left: calc(0% - 10px);
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+button:hover:before {
+  left: calc(0% - 10px);
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 </style>
