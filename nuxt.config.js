@@ -64,6 +64,7 @@ export default {
       src: '~plugins/vue-scrollmagic.js',
       ssr: false,
     },
+    { src: '~plugins/ga.js', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -74,9 +75,12 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxt/image',
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-128199176-1'
-    }]
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-128199176-1',
+      },
+    ],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
