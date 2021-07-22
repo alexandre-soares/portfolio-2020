@@ -65,6 +65,7 @@ export default {
       ssr: false,
     },
     { src: '~plugins/ga.js', mode: 'client' },
+    { src: '~/plugins/vue-gtag' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

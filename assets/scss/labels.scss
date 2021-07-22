@@ -21,46 +21,4 @@
   & span {
     font-size: 1.6rem;
   }
-
-  &--html {
-    background: #e96329;
-  }
-
-  &--css {
-    background: #3595cf;
-  }
-
-  &--javascript {
-    background-color: #e4a126;
-  }
-
-  &--vuejs {
-    background: #00c58e;
-  }
-
-  &--nuxtjs {
-    background: #2f495e;
-  }
-
-  &--sass {
-    background: #ce6b9e;
-  }
-
-  &--vscode {
-    background: linear-gradient(to right, #2385c4, #0f6baa);
-  }
-
-  &--github {
-    background: white;
-    color: black;
-  }
-
-  &--nucleo {
-    background: #5d88e7;
-    color: white;
-  }
-
-  &--postman {
-    background: #f76935;
-  }
 }

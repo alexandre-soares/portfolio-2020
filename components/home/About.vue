@@ -263,6 +263,7 @@ export default {
 
       @media only screen and (max-width: $bp-large) {
         margin-left: 0;
+        width: 70%;
       }
     }
   }
