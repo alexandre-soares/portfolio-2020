@@ -174,6 +174,4 @@ img {
     display: block;
   }
 }
-
-
 </style>

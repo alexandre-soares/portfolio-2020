@@ -35,7 +35,7 @@ export default {}
   align-items: center;
   justify-content: flex-start;
 
-  background: url('../../static/img/background/alex.png'); /* Chrome 10-25, Safari 5.1-6 */
+  background: url('../../static/img/background/alex-min.png'); /* Chrome 10-25, Safari 5.1-6 */
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;

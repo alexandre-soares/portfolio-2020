@@ -131,7 +131,7 @@ $base-line-height: 1.5em;
 }
 
 a footer {
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 
   &:hover {
     color: red;
