@@ -22,7 +22,7 @@ export default {
       },
       {
         property: 'og:image',
-        content: `/featured-image.png`,
+        content: `/img/featured-image.png`,
       },
     ],
     link: [

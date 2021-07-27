@@ -64,7 +64,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 5rem;
   font-weight: 200;
   margin: 2rem 0 2.5rem;
 }
